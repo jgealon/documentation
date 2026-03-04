@@ -1,5 +1,5 @@
-ADALM-MMSC
-==========
+ADALM-LSMSPG
+============
 
 Advanced Active Learning Module for Signal Chain Exploration and Design.
 
