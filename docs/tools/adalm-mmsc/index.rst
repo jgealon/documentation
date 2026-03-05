@@ -66,7 +66,7 @@ Applications
 System Architecture
 +++++++++++++++++++
 
-.. figure:: updated_block_diagram_72vto96v.png
+.. figure:: adalm-mmsc_block_diagram.png
 
    ADALM-MMSC Simplified Block Diagram
 
@@ -136,7 +136,7 @@ Equipment Needed
 Preparing the MCU
 +++++++++++++++++
 
-By JGEALON default (upon purchase), the AD+BMSE2E3W+SL board comes with a MAX32625PICO programmer adapter that is loaded with firmware image.
+By default (upon purchase), the AD+BMSE2E3W+SL board comes with a MAX32625PICO programmer adapter that is loaded with firmware image.
 
 Otherwise, if you are using a new MAX32625PICO programmer (that is not part of the original kit), make sure to flash it first with the correct firmware image before connecting it to the AD-BMSE2E3W-SL board. If you do not know how to load the image, follow the instructions below:
 
