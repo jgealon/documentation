@@ -164,7 +164,7 @@ Pre-built binaries are available at:
 (Filename: ``adalm-mmsc.zip``)
 
 The included MAX32625PICO is used to upgrade the firmware. Follow the directions at:
-`MAX32625PICO firmware images` <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
+`MAX32625PICO firmware images <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
 to load the MAX32666FTHR-specific binary.
 
 Then, connect the 10-pin ribbon cable to the MAX32666FTHR, and drag-and-drop the
