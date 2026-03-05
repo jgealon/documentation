@@ -73,7 +73,7 @@ Upon purchase of the ADALM-MMSC kit, the package comes with the following boards
    ADALM-MMSC Kit Contents
 
 Package Contents
-++++++++
+++++++++++++++++
 
 - A: 1x ADALM-MMSC Board
 - B: 1x Pre-programmed MAX32666FTHR board
@@ -118,44 +118,49 @@ Software Needed
 
 - Requires `Scopy 2.1 or newer <https://analogdevicesinc.github.io/scopy/index.html>`_.
 
-Connect the ADALM-MMSC to the host computer using the USB-A to USB-Micro cable, and open the Scopy GUI. If you are using the ADALM2000, connect the instrument and allow the calibration to complete. The next step is to add the ADALM-MMSC connection. Click the "+" button in the Scopy home screen as shown in the figure below.
+- Connect the ADALM-MMSC to the host computer using the USB-A to USB-Micro cable, and open the Scopy GUI. If you are using the ADALM2000, connect the instrument and allow the calibration to complete. The next step is to add the ADALM-MMSC connection. Click the "+" button in the Scopy home screen as shown in the figure below.
+
 .. figure:: scopy_add_device.png
 
    Adding the ADALM-MMSC in Scopy
 
-Click the "Scan" button, and select the ADALM-MMSC's serial port. There may be more than one serial port, depending on what other devices are connected to the host machine.
+- Click the "Scan" button, and select the ADALM-MMSC's serial port. There may be more than one serial port, depending on what other devices are connected to the host machine.
+
 .. figure:: scopy_scan.png
 
    Scanning for the ADALM-MMSC Serial Port
 
-Click Verify, then Add Device.
+- Click Verify, then Add Device.
+
 .. figure:: scopy_verify.png
 
    Verifying the ADALM-MMSC Connection
 
-From the home screen, click Connect.
+- From the home screen, click Connect.
+
 .. figure:: scopy_connect.png
 
    Connecting to the ADALM-MMSC in Scopy
 
-At this point Scopy is ready to acquire data from the ADALM-MMSC. Click into the ADC Time panel, set the buffer size to 4096 (maximum is =16384, limited by the AD4080's FIFO depth), then click Start. The figure below shows the ADC output when the signal generator is set to:
+- At this point Scopy is ready to acquire data from the ADALM-MMSC. Click into the ADC Time panel, set the buffer size to 4096 (maximum is =16384, limited by the AD4080's FIFO depth), then click Start. The figure below shows the ADC output when the signal generator is set to:
 
-Channel 1 : 1 Vpp, 500 kHz Sinewave 
+   - Channel 1 : 1 Vpp, 500 kHz Sinewave 
 Channel 2: 1 Vpp, 50 kHz Sawtooth
+
 .. figure:: scopy_adc_time.png
 
    ADC Time Domain Capture in Scopy
 
-Refer to supporting lab exercises and workshop material for additional experiments.
+- Refer to supporting lab exercises and workshop material for additional experiments.
 
 Firmware Upgrades
 +++++++++++++++++
 
 The ADALM-MMSC firmware source is available at:
-`ADALM-MMSC firmware (no-OS)` <https://github.com/analogdevicesinc/no-OS/tree/main/projects/adalm-mmsc>`_
+`ADALM-MMSC firmware (no-OS) <https://github.com/analogdevicesinc/no-OS/tree/main/projects/adalm-mmsc>`_
 
 Pre-built binaries are available at:
-`ADALM-MMSC releases` <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
+`ADALM-MMSC releases <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
 (Filename: ``adalm-mmsc.zip``)
 
 The included MAX32625PICO is used to upgrade the firmware. Follow the directions at:
