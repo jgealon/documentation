@@ -1,14 +1,7 @@
 ADALM-MMSC
 ==========
 
-Advanced Active Learning Module for Signal Chain Exploration and Design.
-
-A concise version of this document is available in portable document format.
-Click on the file below to download:
-
-.. admonition:: Download
-
-   :download:`ADALM-MMSC QuickStart Guide (pdf) <ad-bmse2e3w-sl-ug-2245.pdf>`
+Mixed-Mode Signal Chain Active Learning Module.
 
 Overview
 --------
@@ -70,184 +63,142 @@ System Architecture
 
    ADALM-MMSC Simplified Block Diagram
 
-.. csv-table:: Specifications
-   :file: specifications.csv
-   :widths: 20, 10, 10, 10, 10, 40
-   :header-rows: 1
-
 What's Inside the Box?
 ++++++++++++++++++++++
 
 Upon purchase of the ADALM-MMSC kit, the package comes with the following boards and accessories:
 
-.. figure:: ad-bmse2e3w-sl_package_contents.png
+.. figure:: package_contents.png
 
    ADALM-MMSC Kit Contents
+
+Package Contents
+++++++++
+
+- A: 1x ADALM-MMSC Board
+- B: 1x Pre-programmed MAX32666FTHR board
+- C: 1x USB-A to Micro-USB cable
+- D: 1x MAX32625PICO with 10-pin ribbon cable for SWD connection (for future firmware upgrades)
 
 Components and Connections
 ++++++++++++++++++++++++++
 
-.. figure:: revised_ad-bmse2e3w-sl_board_with_pin_labels.png
+.. figure:: package_contents.png
 
    Hardware Components and Connections
 
-.. csv-table:: Hardware Part Functions
-   :file: components.csv
+.. csv-table:: Jumper Configurations
+   :file: jumper_configurations.csv
    :widths: 5, 25, 60
    :header-rows: 1
 
-System Evaluation
-+++++++++++++++++
+.. csv-table:: Connection Descriptions
+   :file: connections.csv
+   :widths: 5, 25, 60
+   :header-rows: 1
 
-Follow the setup shown in the diagram below to get the board up and running. Ensure that the hardware parts and equipment are complete based on list of Equipment Needed. The banana plug cables used in this setup only have a maximum rating of 10A. Cables suitable for higher current rating must be used if the intended application operates at range higher than 10A. Note that the AD-BMSE2E3W-SL board can only accommodate up to 100A.
+Quick Start
++++++++++++
 
-.. figure:: system_evaluation_set-up.png
+There are numerous combinations of signal sources, signal analyzers, and software that can be used with the ADALM-MMSC. The most straightforward to get up and running, and establish baseline functionality is to use the ADALM2000 with Scopy. Scopy is a general-purpose IIO-based utility, with instrument-specific control panels for various hardware, including the ADALM2000.
 
-   Evaluation Setup
 
 Equipment Needed
 ^^^^^^^^^^^^^^^^
 
 - 1x ADALM-MMSC Board (as DUT)
 - Windows, Mac, or Linux host computer with available USB port
-- Signal generator, :adi:`ADALM2000 <https://analogdevicesinc.github.io/documentation/tools/m2k/index.html>` or similar.
+- Signal generator, :adi:`ADALM2000 <https://analogdevicesinc.github.io/documentation/tools/m2k/index.html>`_or similar.
    - Generators in the audio range work great
    - PC sound card with Audacity is another option
 
-.. warning::
 
-   This reference design has not undergone compliant testing for EMI/ EMC standards for automotive. It is up for the user to do its qualification as the requirements vary depending on its end application or use cases.
+Software Needed
+^^^^^^^^^^^^^^^
 
+- Requires `Scopy 2.1 or newer <https://analogdevicesinc.github.io/scopy/index.html>`_.
 
-.. esd-warning::
+Connect the ADALM-MMSC to the host computer using the USB-A to USB-Micro cable, and open the Scopy GUI. If you are using the ADALM2000, connect the instrument and allow the calibration to complete. The next step is to add the ADALM-MMSC connection. Click the "+" button in the Scopy home screen as shown in the figure below.
+.. figure:: scopy_add_device.png
 
-.. note::
+   Adding the ADALM-MMSC in Scopy
 
-   For high current applications requiring greater than 50 A, it is advisable to install a heat sink to protect the pre-charge, charge, and discharge MOSFETs from overheating.
+Click the "Scan" button, and select the ADALM-MMSC's serial port. There may be more than one serial port, depending on what other devices are connected to the host machine.
+.. figure:: scopy_scan.png
 
+   Scanning for the ADALM-MMSC Serial Port
 
-   - The AD-BMSE2E3W-SL Kit has 7 available HEATSINK PIN-FIN W/TAPE (375424B00034G) easy-to-install, adhesive type, aluminum top mount heat sink than can be installed directly on top of the board.
+Click Verify, then Add Device.
+.. figure:: scopy_verify.png
 
-   - Peel off the protective film from the bottom of each heat sink and firmly press each one on top of the following FETs:
+   Verifying the ADALM-MMSC Connection
 
-   (1) Attach the 5 heat sinks on the top layer of the board (Q4, Q5, Q6, Q7, and Q9),
-   (2) the remaining 2 heat sinks on the bottom layer of the board (Q3 and Q8).
+From the home screen, click Connect.
+.. figure:: scopy_connect.png
 
-Preparing the MCU
+   Connecting to the ADALM-MMSC in Scopy
+
+At this point Scopy is ready to acquire data from the ADALM-MMSC. Click into the ADC Time panel, set the buffer size to 4096 (maximum is =16384, limited by the AD4080's FIFO depth), then click Start. The figure below shows the ADC output when the signal generator is set to:
+
+Channel 1 : 1 Vpp, 500 kHz Sinewave 
+Channel 2: 1 Vpp, 50 kHz Sawtooth
+.. figure:: scopy_adc_time.png
+
+   ADC Time Domain Capture in Scopy
+
+Refer to supporting lab exercises and workshop material for additional experiments.
+
+Firmware Upgrades
 +++++++++++++++++
 
-By default (upon purchase), the AD+BMSE2E3W+SL board comes with a MAX32625PICO programmer adapter that is loaded with firmware image.
+The ADALM-MMSC firmware source is available at:
+`ADALM-MMSC firmware (no-OS)` <https://github.com/analogdevicesinc/no-OS/tree/main/projects/adalm-mmsc>`_
 
-Otherwise, if you are using a new MAX32625PICO programmer (that is not part of the original kit), make sure to flash it first with the correct firmware image before connecting it to the AD-BMSE2E3W-SL board. If you do not know how to load the image, follow the instructions below:
+Pre-built binaries are available at:
+`ADALM-MMSC releases` <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
+(Filename: ``adalm-mmsc.zip``)
 
-#. Download the firmware image:
-   :downgit-max32625pico-firmware-images:`MAX32625PICO Firmware Image for MAX32690 <master:bin/max32625_max32690evkit_if_crc_swd_v1.0.7.bin>`
+The included MAX32625PICO is used to upgrade the firmware. Follow the directions at:
+`MAX32625PICO firmware images` <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
+to load the MAX32666FTHR-specific binary.
 
-#. Do not connect the MAX32625PICO to the AD-BMSE2E3W-SL Board yet.
+Then, connect the 10-pin ribbon cable to the MAX32666FTHR, and drag-and-drop the
+``adalm-mmsc_maxim_iio_example_max32665.hex`` file into the DAPLINK drive
+(typically ``D:\`` or ``E:\`` on Windows). The drive will automatically eject
+and the firmware will be upgraded.
 
-#. Connect the MAX32625PICO to the Host PC using the micro USB to USB cable.
-
-#. Press the button on the MAX32625PICO. (Do not release the button until the MAINTENANCE drive is mounted)
-
-#. Release the button once the MAINTENANCE drive is mounted.
-
-#. Drag and drop (to the MAINTENANCE drive) the firmware image.
-
-#. After a few seconds, the MAINTENANCE drive will disappear and be replaced by a drive named DAPLINK. This indicates that the process is complete, and the MAX32625PICO can now be used to flash the firmware of the AD-BMSE2E3W-SL Board.
-
-Hardware Setup
-++++++++++++++
-The board utilizes the DC2472A battery emulator as input for cell voltage measurement. The DC2472A allows a cell voltage of 1.4 V (min) to 4.2 V (max). Follow below steps to set up the board for cell measurement:
-
-#. Screw the two cell connector blocks to the two DC2472A battery emulators. Note that the first two terminals and the last terminal of each DC2472A cell connector must be left hanging (refer to below figure). Make sure to also set the last two terminals' input to low voltage or equivalent range of roughly 1.4V per cell.
-
-   .. figure:: battery_emulator_pins.png
-
-      DC2472A Battery Emulator Pins
-
-#. Connect the DC2472A battery emulators to the ADBMSE2E3W-SL board through the cell connector blocks. Then, connect a micro-USB Type B cable to each DC2472A battery emulator and power the boards by connecting the other end of the cables to the Host PC.
-
-   .. figure:: usb_emulator.png
-
-      Connecting the DC2472A Battery Emulator
-
-#. Set the DC2472A battery emulators to the lowest voltage by fully turning the Cell Voltage Adjustment Potentiometer counterclockwise.
-
-#. Attach the MAX32625PICO programmer to the AD-BMSE2E3W-SL board using the 10-pin ribbon SWD cable. Power the MAX32625PICO using a micro-USB to USB cable connected to the Host PC.
-
-   .. figure:: max32625_power_usb_pc.png
-
-      Connecting the MAX32625PICO Programmer
-
-#. Connect the alligator clip cable (red) to the VBATTP Pin or the 3rd of Pin 17 header of the DC2472A battery emulator. Then, insert the other end of the cable (banana jack plug) to TP16 (VBAT+ terminal) of the AD-BMSE2E3W-SL board.
-
-   .. figure:: connector_supply_vbattp.png
-
-      DC2472A's VBATT+ Supply Connector to AD-BMSE2E3W-SL's VBAT+ Terminal
-
-#. Connect the alligator clip cable (black) to the GND (VBAT-) supply of the DC2472A battery emulator. Then, connect the other end of the cable to the Rsense (top side) of the AD-BMSE2E3W-SL.
-
-   .. figure:: gnd_vbat-_to_gnd_sense.png
-
-      DC2472A's VBAT- Supply Connector to AD-BMSE2E3W-SL's Rsense
-
-
-#. Set the DC2472A battery emulators to HIGH voltage or equivalent to 4.1 V per cell by turning the Cell Voltage Adjustment Potentiometer clockwise.
-
-#. Check the supply for the following test points as described in the diagram and table below. Make sure that the voltage levels are within the specified range.
-
-   .. figure:: quick_test_points.png
-
-      AD-BMSE2E3W-SL Test Points
-
-   .. csv-table:: Hardware Supply Quick Test Point
-     :file: test-points.csv
-     :widths: 15, 30, 35, 20
-     :header-rows: 1
-
-#. Once all steps are completed, you are now ready to use this reference design and run the accompanying software found in the link below:
-
-   .. note::
-
-      The AD-BMSE2E3W-SL comes complete with firmware examples and easy-to-use application GUI. Access the software resources and see the setup procedure in the AD-BMSE2E3W-SL Software User Guide.
-
-Resources
-++++++++++++
-
-- :adi:`ADBMS6830`
-- :adi:`ADBMS2950`
-- :adi:`ADBMS6822`
-- :adi:`MAX32690`
-- :adi:`LLT8303`
-- :adi:`ADUM225N`
-- :adi:`LTC7001`
-- :adi:`LTC3639`
 
 Design & Integration Files
 ++++++++++++++++++++++++++
-
-.. admonition:: Download
-
-   `AD-BMSE2E3W-SL Design Support Package <ad-bmse2e3w-sl-designsupport.zip>`_
 
    * Schematic
    * PCB Layout
    * Bill of Materials
    * Allegro Project
+   * Simulation Files
 
-Guides&Sample Software
-----------------------
-
-A software user-guide and sample application for :adi:`AD-BMSE2E3W-SL` are available:
-
-.. toctree::
-   :titlesonly:
-   :glob:
-
-   */index
 
 Help and Support
 ----------------
 
 For questions and more information, please visit the :ez:`EngineerZone Support Community </>`.
 
+Using ADALM-MMSC with Various ADI Software
+++++++++++++++++++++++++++++++++++++++++++
+
+Availlable software tools for use with the ADALM-MMSC include:
+   * Device Drivers
+   * Example Projects
+   * Firmware
+
+Connecting to IIO Server
+Connecting to Scopy
+
+Additional Resources
+++++++++++++++++++++
+
+   * Links to related demo or example projects 
+   * Product pages
+   * Application notes
+   * Links to other demo poages using the board
+   * Scopy (`Analog Devices Wiki <https://wiki.analog.com/university/tools/m2k/scopy>`_)
