@@ -108,7 +108,7 @@ Equipment Needed
 
 - 1x ADALM-MMSC Board (as DUT)
 - Windows, Mac, or Linux host computer with available USB port
-- Signal generator, :adi:`ADALM2000 <https://analogdevicesinc.github.io/documentation/tools/m2k/index.html>`_or similar.
+- Signal generator, :adi:`ADALM2000 <https://analogdevicesinc.github.io/documentation/tools/m2k/index.html>` or similar.
    - Generators in the audio range work great
    - PC sound card with Audacity is another option
 
@@ -144,8 +144,8 @@ Software Needed
 
 - At this point Scopy is ready to acquire data from the ADALM-MMSC. Click into the ADC Time panel, set the buffer size to 4096 (maximum is =16384, limited by the AD4080's FIFO depth), then click Start. The figure below shows the ADC output when the signal generator is set to:
 
-   - Channel 1 : 1 Vpp, 500 kHz Sinewave 
-Channel 2: 1 Vpp, 50 kHz Sawtooth
+   - Channel 1 : 1 Vpp, 500 kHz Sinewave
+   - Channel 2: 1 Vpp, 50 kHz Sawtooth
 
 .. figure:: scopy_adc_time.png
 
