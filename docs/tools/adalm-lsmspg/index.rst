@@ -98,7 +98,6 @@ Refer to the table below for P16, P27 signal mapping.
 
 .. csv-table:: P16 and P27 Signal Mapping
    :file: p16-p27_signal_mapping.csv
-   :widths: 12, 38, 50
    :header-rows: 1
 
 - P31:  AD5592r GPIO, Reference connections
@@ -116,12 +115,10 @@ Address Selection Jumpers
 
 .. csv-table:: P4 Address Selection Jumpers
    :file: ad5593r_i2c_address.csv
-   :widths: 12, 38, 50
    :header-rows: 1
 
 .. csv-table:: P9 Address Selection Jumpers
    :file: lm75_i2c_address.csv
-   :widths: 12, 38, 50
    :header-rows: 1
 
 
