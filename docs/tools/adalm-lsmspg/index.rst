@@ -6,6 +6,7 @@ Active Learning Module for Low-Speed Mixed-Signal Exploration and Prototyping.
 Overview
 --------
 
+
 .. figure:: adalm-lsmspg_angle.jpeg
    :align: left
 
@@ -50,10 +51,10 @@ Applications
 System Architecture
 +++++++++++++++++++
 
-.. figure:: adalm-lsmspg_block_diagram.png
+
+.. figure:: ADALM-LSMSPG_block_diagram.png
 
    ADALM-LSMSPG System Architecture
-   
 
 Specifications
 ++++++++++++++
