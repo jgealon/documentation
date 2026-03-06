@@ -50,12 +50,13 @@ Applications
 System Architecture
 +++++++++++++++++++
 
-.. figure:: adalm-lsmspg_block_diagram.png
+.. figure:: tools/adalm-lsmspg/adalm-lsmspg_block_diagram.png
 
    ADALM-LSMSPG Simplified Block Diagram
 
 Specifications
 ++++++++++++++
+
 
 What's Inside the Box?
 ++++++++++++++++++++++
@@ -80,8 +81,6 @@ Components and Connections
 
    ADALM-LSMSPG Hardware Components and Connections
 
-Components and Connections
-++++++++++++++++++++++++++
 
 - **P31**: Raspberry Pi interface. Connect to Raspberry Pi 4, 400, 5, 500 via supplied ribbon cable. Be sure to observe polarity / pin 1 locaton.
 
