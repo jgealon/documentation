@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Active Learning Module for Low‑Speed Mixed‑Signal Exploration and Prototyping." name="description" />
+<meta content="Active Learning Module for Low-Speed Mixed-Signal Exploration and Prototyping." name="description" />
 
     <title>ADALM-LSMSPG &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
@@ -99,19 +99,24 @@
 <li><a class="reference internal" href="#features">Features</a></li>
 <li><a class="reference internal" href="#applications">Applications</a></li>
 <li><a class="reference internal" href="#system-architecture">System Architecture</a></li>
+<li><a class="reference internal" href="#specifications">Specifications</a></li>
 <li><a class="reference internal" href="#what-s-inside-the-box">What’s Inside the Box?</a></li>
+<li><a class="reference internal" href="#package-contents">Package Contents</a></li>
 <li><a class="reference internal" href="#components-and-connections">Components and Connections</a></li>
-<li><a class="reference internal" href="#system-evaluation">System Evaluation</a><ul>
-<li><a class="reference internal" href="#equipment-needed">Equipment Needed</a></li>
+<li><a class="reference internal" href="#address-selection-jumpers">Address Selection Jumpers</a></li>
+<li><a class="reference internal" href="#system-monitor-control">System Monitor/Control</a></li>
+<li><a class="reference internal" href="#curve-tracer-application-circuits">Curve Tracer Application Circuits</a></li>
+<li><a class="reference internal" href="#hardware-setup">Hardware Setup</a></li>
+<li><a class="reference internal" href="#software-setup">Software Setup</a><ul>
+<li><a class="reference internal" href="#raspberry-pi-setup">Raspberry Pi Setup</a></li>
+<li><a class="reference internal" href="#max32666fthr-setup">MAX32666FTHR Setup</a></li>
+<li><a class="reference internal" href="#application-setup">Application Setup</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#preparing-the-mcu">Preparing the MCU</a></li>
-<li><a class="reference internal" href="#hardware-setup">Hardware Setup</a></li>
-<li><a class="reference internal" href="#resources">Resources</a></li>
+<li><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
 <li><a class="reference internal" href="#design-integration-files">Design &amp; Integration Files</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#guides-sample-software">Guides&amp;Sample Software</a></li>
 <li><a class="reference internal" href="#help-and-support">Help and Support</a></li>
 </ul>
 </li>
@@ -600,7 +605,7 @@ Content on this topic
             
   <section id="adalm-lsmspg">
 <h1>ADALM-LSMSPG<a class="headerlink" href="#adalm-lsmspg" title="Link to this heading"></a></h1>
-<p>Active Learning Module for Low‑Speed Mixed‑Signal Exploration and Prototyping.</p>
+<p>Active Learning Module for Low-Speed Mixed-Signal Exploration and Prototyping.</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <figure class="align-left" id="id1">
@@ -656,582 +661,280 @@ Content on this topic
 <figure class="align-default" id="id2">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ADALM-LSMSPG_block_diagram.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ADALM-LSMSPG_block_diagram.png" />
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">ADALM-LSMSPG Simplified Block Diagram</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">ADALM-LSMSPG System Architecture</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<div class="table-wrapper colwidths-given docutils container" id="id3">
-<table class="docutils align-default" id="id3">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Specifications</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 20.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 40.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>SYSTEM</p></th>
-<th class="head"></th>
-<th class="head"></th>
-<th class="head"></th>
-<th class="head"></th>
-<th class="head"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Parameter</p></td>
-<td><p>Min</p></td>
-<td><p>Typical</p></td>
-<td><p>Max</p></td>
-<td><p>Unit</p></td>
-<td><p>Notes</p></td>
-</tr>
-<tr class="row-odd"><td><p>System Vin+ Supply Voltage from Battery</p></td>
-<td><p>60</p></td>
-<td></td>
-<td><p>100</p></td>
-<td><p>V</p></td>
-<td><p>Input voltage supply from battery</p></td>
-</tr>
-<tr class="row-even"><td><p>Battery Emulator System Output Voltage</p></td>
-<td><p>~66</p></td>
-<td></td>
-<td><p>92</p></td>
-<td><p>V</p></td>
-<td><p>Safe output voltage from Battery Emulator</p></td>
-</tr>
-<tr class="row-odd"><td><p>Current Discharge</p></td>
-<td></td>
-<td><p>50</p></td>
-<td><p>100</p></td>
-<td><p>A</p></td>
-<td><p>Current rating that the BMS can deliver at discharge mode</p></td>
-</tr>
-<tr class="row-even"><td><p>Current Charge</p></td>
-<td><p>0.3</p></td>
-<td><p>50</p></td>
-<td><p>100</p></td>
-<td><p>A</p></td>
-<td><p>Current rating that the BMS can deliver at pre-charge/charge mode</p></td>
-</tr>
-<tr class="row-odd"><td><p>Pre-Charge Resistor</p></td>
-<td></td>
-<td><p>3×33</p></td>
-<td></td>
-<td><p>Ω</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Charge Voltage Input</p></td>
-<td></td>
-<td></td>
-<td><p>100</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Discharge Voltage Output</p></td>
-<td></td>
-<td><p>65</p></td>
-<td><p>92</p></td>
-<td><p>V</p></td>
-<td><p>Regulated voltage range</p></td>
-</tr>
-<tr class="row-even"><td><p>FET Discharge Rise Time</p></td>
-<td></td>
-<td></td>
-<td><p>42</p></td>
-<td><p>mS</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>FET Driver Discharge Input</p></td>
-<td></td>
-<td></td>
-<td><p>5</p></td>
-<td><p>V</p></td>
-<td><p>Coming from GPIO of ADBMS2950</p></td>
-</tr>
-<tr class="row-even"><td><p>FET Pre-Charge/Charge Rise Time</p></td>
-<td></td>
-<td></td>
-<td><p>88</p></td>
-<td><p>mS</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>FET Driver Pre-Charge/Charge Input</p></td>
-<td></td>
-<td></td>
-<td><p>5</p></td>
-<td><p>V</p></td>
-<td><p>Coming from GPIO of ADBMS2950</p></td>
-</tr>
-<tr class="row-even"><td><p>FET V(gs) range</p></td>
-<td><p>-20</p></td>
-<td></td>
-<td><p>20</p></td>
-<td><p>V</p></td>
-<td><p>Coming from GPIO of ADBMS2950</p></td>
-</tr>
-<tr class="row-odd"><td><p>FET Rds(on) range</p></td>
-<td></td>
-<td></td>
-<td><p>4.8</p></td>
-<td><p>mΩ</p></td>
-<td><p>Coming from GPIO of ADBMS2950</p></td>
-</tr>
-<tr class="row-even"><td><p>ADBMS6830 Cell Monitor</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Total Supply Voltage, V+ to V−</p></td>
-<td><p>-0.3</p></td>
-<td></td>
-<td><p>85</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>VREG Supply</p></td>
-<td><p>4.5</p></td>
-<td><p>5</p></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>VREF1, VREF2</p></td>
-<td><p>3</p></td>
-<td></td>
-<td><p>3.3</p></td>
-<td></td>
-<td><p>Supply to internal ADCs</p></td>
-</tr>
-<tr class="row-even"><td><p>VRES/VDD</p></td>
-<td><p>4.5</p></td>
-<td><p>5</p></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Temp</p></td>
-<td><p>-40</p></td>
-<td></td>
-<td><p>125</p></td>
-<td><p>°C</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>CPIN Input Range</p></td>
-<td><p>-2.5</p></td>
-<td></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Cell Count</p></td>
-<td><p>17</p></td>
-<td></td>
-<td><p>32</p></td>
-<td></td>
-<td><p>Min of 17 cells for the system to initiate daisy chain</p></td>
-</tr>
-<tr class="row-even"><td><p>Drive</p></td>
-<td><p>-0.3</p></td>
-<td></td>
-<td><p>7</p></td>
-<td><p>V</p></td>
-<td><p>Drive voltage range with respect to each cell monitoring V-</p></td>
-</tr>
-<tr class="row-odd"><td><p>ADBMS2950 Pack Monitor</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Main Supply Voltage In</p></td>
-<td><p>14</p></td>
-<td></td>
-<td></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>VREG Pack Monitor</p></td>
-<td><p>4.5</p></td>
-<td><p>5</p></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Current Input S1A, I1A, I1B</p></td>
-<td><p>-4</p></td>
-<td></td>
-<td><p>4</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Current Input S1A, I1A, I1B</p></td>
-<td><p>-4</p></td>
-<td></td>
-<td><p>4</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Current Input S2A, I2A, I2B</p></td>
-<td><p>-4</p></td>
-<td></td>
-<td><p>4</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Current Input I3A, I3B</p></td>
-<td><p>-4</p></td>
-<td></td>
-<td><p>4</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>MAX32690 Microcontroller</p></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>MCU Supply Voltage from BMS</p></td>
-<td><p>3.3</p></td>
-<td></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>MCU IO Supply for 1.8 V</p></td>
-<td><p>1.6</p></td>
-<td></td>
-<td><p>3</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>MCU VDD Supply</p></td>
-<td><p>3.3</p></td>
-<td></td>
-<td><p>5.5</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>MCU Supply at 1.2 V</p></td>
-<td><p>1.1</p></td>
-<td></td>
-<td><p>1.35</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>MCU Supply at 1.0 V</p></td>
-<td><p>0.9</p></td>
-<td></td>
-<td><p>1.2</p></td>
-<td><p>V</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
+</section>
+<section id="specifications">
+<h3>Specifications<a class="headerlink" href="#specifications" title="Link to this heading"></a></h3>
 </section>
 <section id="what-s-inside-the-box">
 <h3>What’s Inside the Box?<a class="headerlink" href="#what-s-inside-the-box" title="Link to this heading"></a></h3>
 <p>Upon purchase of the ADALM-LSMSPG kit, the package comes with the following boards and accessories:</p>
-<figure class="align-default" id="id4">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad-bmse2e3w-sl_package_contents.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad-bmse2e3w-sl_package_contents.png" />
+<figure class="align-default" id="id3">
+<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_package_contents.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_package_contents.png" />
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">ADALM-LSMSPG Kit Contents</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">ADALM-LSMSPG Kit Contents</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+</section>
+<section id="package-contents">
+<h3>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>ADALM-LSMSPG main board</p></li>
+<li><p>40-pin, 15 cm ribbon cable for Raspberry Pi</p></li>
+<li><p>Jumpers for setting AD5592r and LM75 I2C address</p></li>
+</ul>
 </section>
 <section id="components-and-connections">
 <h3>Components and Connections<a class="headerlink" href="#components-and-connections" title="Link to this heading"></a></h3>
-<figure class="align-default" id="id5">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/revised_ad-bmse2e3w-sl_board_with_pin_labels.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/revised_ad-bmse2e3w-sl_board_with_pin_labels.png" />
+<figure class="align-default" id="id4">
+<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_with_pin_labels.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_with_pin_labels.png" />
 <figcaption>
-<p><span class="caption-number">Figure 4 </span><span class="caption-text">Hardware Components and Connections</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 4 </span><span class="caption-text">ADALM-LSMSPG Hardware Components and Connections</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<div class="table-wrapper colwidths-given docutils container" id="id6">
-<table class="docutils align-default" id="id6">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Hardware Part Functions</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<ul class="simple">
+<li><p><strong>P31</strong>: Raspberry Pi interface. Connect to Raspberry Pi 4, 400, 5, 500 via supplied ribbon cable. Be sure to observe polarity / pin 1 locaton.</p></li>
+<li><p><strong>P1</strong>, <strong>P28</strong>: Feather interface. Pins or stacking headers must be installed on Feather platform board, with pins facing downward.</p></li>
+</ul>
+<p><em>Note:</em> The Raspberry Pi and Feather interfaces are mutually exclusive.</p>
+<ul class="simple">
+<li><p><strong>P16</strong>: ADALM2000 interface. Allows monitoring of digital traffic on the I2C, SPI, and various GPIO signals.</p></li>
+<li><p><strong>P27</strong>: ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.</p></li>
+</ul>
+<p>Refer to the table below for P16, P27 signal mapping.</p>
+<div class="table-wrapper colwidths-given docutils container" id="id5">
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">P16 and P27 Signal Mapping</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
 <colgroup>
-<col style="width: 5.6%" />
-<col style="width: 27.8%" />
-<col style="width: 66.7%" />
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Jumper</p></th>
-<th class="head"><p>Function</p></th>
-<th class="head"><p>Default Setting</p></th>
+<tr class="row-odd"><th class="head"><p>ADALM2000</p></th>
+<th class="head"><p>ADALM-LSMSPG Signal</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>P15</p></td>
-<td><p>Input attenuation</p></td>
-<td><p>1-2 (5:3 attenuation, +/-5V full-scale)</p></td>
+<tr class="row-even"><td><p>D0</p></td>
+<td><p>SPI MOSI</p></td>
 </tr>
-<tr class="row-odd"><td><p>P10</p></td>
-<td><p>Positive FDA input</p></td>
-<td><p>1-2 (Direct connection)</p></td>
+<tr class="row-odd"><td><p>D1</p></td>
+<td><p>SPI MISO</p></td>
 </tr>
-<tr class="row-even"><td><p>P12</p></td>
-<td><p>Negative FDA input</p></td>
-<td><p>2-3 (Ground)</p></td>
+<tr class="row-even"><td><p>D2</p></td>
+<td><p>SPI SCLK</p></td>
 </tr>
-<tr class="row-odd"><td><p>P5</p></td>
-<td><p>Filter RA</p></td>
-<td><p>1-2 (RAL, 12.k total)</p></td>
+<tr class="row-odd"><td><p>D3</p></td>
+<td><p>SPI CE0</p></td>
 </tr>
-<tr class="row-even"><td><p>P8</p></td>
-<td><p>Filter RB</p></td>
-<td><p>1-2 (RBL, 1.2k)</p></td>
+<tr class="row-even"><td><p>D4</p></td>
+<td><p>SPI CE1</p></td>
 </tr>
-<tr class="row-odd"><td><p>P16</p></td>
-<td><p>Filter CI</p></td>
-<td><p>1-3 (not connected)</p></td>
+<tr class="row-odd"><td><p>D5</p></td>
+<td><p>I2C SDA</p></td>
 </tr>
-<tr class="row-even"><td><p>P14</p></td>
-<td><p>Filter CF</p></td>
-<td><p>1-3 (not connected)</p></td>
+<tr class="row-even"><td><p>D6</p></td>
+<td><p>I2C SCL</p></td>
 </tr>
-<tr class="row-odd"><td><p>P11</p></td>
-<td><p>Gain select</p></td>
-<td><p>1-3 (unity gain)</p></td>
+<tr class="row-odd"><td><p>D7</p></td>
+<td><p>AD5592r IO3</p></td>
 </tr>
-<tr class="row-even"><td><p>P9</p></td>
-<td><p>FDA Mode</p></td>
-<td><p>1-2 (full power mode)</p></td>
+<tr class="row-even"><td><p>D13</p></td>
+<td><p>GPIO19</p></td>
 </tr>
-<tr class="row-odd"><td><p>P29, P30</p></td>
-<td><p>Extra CIN</p></td>
-<td><p>Not installed</p></td>
+<tr class="row-odd"><td><p>D14</p></td>
+<td><p>GPIO25</p></td>
 </tr>
-<tr class="row-even"><td><p>P23</p></td>
-<td><p>Ref Disturbance Bypass</p></td>
-<td><p>Not installed</p></td>
+<tr class="row-even"><td><p>D15</p></td>
+<td><p>AD5593r IO3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p>P31:  AD5592r GPIO, Reference connections</p></li>
+<li><p>P5 : AD5593r GPIO, Reference connections</p></li>
+</ul>
+<p>Refer to the figure below for P2, P5 signal mapping.
+.. figure:: ad559xr_gpio_pin.png</p>
+<blockquote>
+<div><p>P2 and P5 Signal Mapping</p>
+</div></blockquote>
+</section>
+<section id="address-selection-jumpers">
+<h3>Address Selection Jumpers<a class="headerlink" href="#address-selection-jumpers" title="Link to this heading"></a></h3>
+<div class="table-wrapper colwidths-given docutils container" id="id6">
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">P4 Address Selection Jumpers</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>P4</p></th>
+<th class="head"><p>AD5593r I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2 - 3</p></td>
+<td><p>0x10 (default)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 - 2</p></td>
+<td><p>0x11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper colwidths-given docutils container" id="id7">
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">P9 Address Selection Jumpers</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>P9</p></th>
+<th class="head"><p>LM75 I2C Address</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2 - 3</p></td>
+<td><p>0x48 (default)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 - 2</p></td>
+<td><p>0x49</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="system-evaluation">
-<h3>System Evaluation<a class="headerlink" href="#system-evaluation" title="Link to this heading"></a></h3>
-<p>Follow the setup shown in the diagram below to get the board up and running. Ensure that the hardware parts and equipment are complete based on list of Equipment Needed. The banana plug cables used in this setup only have a maximum rating of 10A. Cables suitable for higher current rating must be used if the intended application operates at range higher than 10A. Note that the AD-BMSE2E3W-SL board can only accommodate up to 100A.</p>
-<figure class="align-default" id="id7">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/system_evaluation_set-up.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/system_evaluation_set-up.png" />
+<section id="system-monitor-control">
+<h3>System Monitor/Control<a class="headerlink" href="#system-monitor-control" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>DS1: Heartbeat LED</p></li>
+<li><p>S1 : Raspberry Pi Shutdown (set in config.txt), Feather reset</p></li>
+</ul>
+</section>
+<section id="curve-tracer-application-circuits">
+<h3>Curve Tracer Application Circuits<a class="headerlink" href="#curve-tracer-application-circuits" title="Link to this heading"></a></h3>
+<p>The AD5592r and AD5593r drive simple NPN and PNP (respectively) curve tracer circuits.
+This represents a simple DC test instrument that involves the “set a current, set a voltage, take a measurement, do some math, step, repeat” sequence of operations.
+The details of the experiments are covered in the <cite>Tools for LSMSPG Lesson &lt;https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html&gt;</cite>.</p>
+<figure class="align-default" id="id8">
+<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5592r_npn_curve_tracer_connections.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5592r_npn_curve_tracer_connections.png" />
 <figcaption>
-<p><span class="caption-number">Figure 5 </span><span class="caption-text">Evaluation Setup</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 5 </span><span class="caption-text">AD5592r NPN Curve Tracer Connections</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<section id="equipment-needed">
-<h4>Equipment Needed<a class="headerlink" href="#equipment-needed" title="Link to this heading"></a></h4>
-<ul class="simple">
-<li><p>1x ADALM-MMSC Board (as DUT)</p></li>
-<li><p>Windows, Mac, or Linux host computer with available USB port</p></li>
-<li><dl class="simple">
-<dt>Signal generator, <a class="icon adi reference external" href="https://www.analog.com/https://analogdevicesinc.github.io/documentation/tools/m2k/index.html" target="_blank">ADALM2000</a> or similar.</dt><dd><ul>
-<li><p>Generators in the audio range work great</p></li>
-<li><p>PC sound card with Audacity is another option</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This reference design has not undergone compliant testing for EMI/ EMC standards for automotive. It is up for the user to do its qualification as the requirements vary depending on its end application or use cases.</p>
-</div>
-<div><div class="esd-warning docutils container">
-<div class="icon"></div><p>All the products described on this page include ESD (electrostatic discharge) sensitive devices. Electrostatic charges as high as 4000V readily accumulate on the human body or test equipment and can discharge without detection.
-Although the boards feature ESD protection circuitry, permanent damage may occur on devices subjected to high-energy electrostatic discharges. Therefore, proper ESD precautions are recommended to avoid performance degradation or loss of functionality. This includes removing static charge on external equipment, cables, or antennas before connecting to the device. </p>
-</div>
-</div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For high current applications requiring greater than 50 A, it is advisable to install a heat sink to protect the pre-charge, charge, and discharge MOSFETs from overheating.</p>
-<ul class="simple">
-<li><p>The AD-BMSE2E3W-SL Kit has 7 available HEATSINK PIN-FIN W/TAPE (375424B00034G) easy-to-install, adhesive type, aluminum top mount heat sink than can be installed directly on top of the board.</p></li>
-<li><p>Peel off the protective film from the bottom of each heat sink and firmly press each one on top of the following FETs:</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Attach the 5 heat sinks on the top layer of the board (Q4, Q5, Q6, Q7, and Q9),</p></li>
-<li><p>the remaining 2 heat sinks on the bottom layer of the board (Q3 and Q8).</p></li>
-</ol>
-</div>
-</section>
-</section>
-<section id="preparing-the-mcu">
-<h3>Preparing the MCU<a class="headerlink" href="#preparing-the-mcu" title="Link to this heading"></a></h3>
-<p>By default (upon purchase), the AD+BMSE2E3W+SL board comes with a MAX32625PICO programmer adapter that is loaded with firmware image.</p>
-<p>Otherwise, if you are using a new MAX32625PICO programmer (that is not part of the original kit), make sure to flash it first with the correct firmware image before connecting it to the AD-BMSE2E3W-SL board. If you do not know how to load the image, follow the instructions below:</p>
-<ol class="arabic simple">
-<li><p>Download the firmware image:
-<a class="icon git reference external" href="https://analogdevicesinc.github.io/DownGit/#/home?url=https://github.com/analogdevicesinc/max32625pico-firmware-images/tree/master/bin/max32625_max32690evkit_if_crc_swd_v1.0.7.bin" target="_blank">MAX32625PICO Firmware Image for MAX32690</a></p></li>
-<li><p>Do not connect the MAX32625PICO to the AD-BMSE2E3W-SL Board yet.</p></li>
-<li><p>Connect the MAX32625PICO to the Host PC using the micro USB to USB cable.</p></li>
-<li><p>Press the button on the MAX32625PICO. (Do not release the button until the MAINTENANCE drive is mounted)</p></li>
-<li><p>Release the button once the MAINTENANCE drive is mounted.</p></li>
-<li><p>Drag and drop (to the MAINTENANCE drive) the firmware image.</p></li>
-<li><p>After a few seconds, the MAINTENANCE drive will disappear and be replaced by a drive named DAPLINK. This indicates that the process is complete, and the MAX32625PICO can now be used to flash the firmware of the AD-BMSE2E3W-SL Board.</p></li>
-</ol>
+<p>The PNP curve tracer has two options for the emitter drive: AD5593r CH3 (default), or the 3.3V supply rail.</p>
+<figure class="align-default" id="id9">
+<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5593r_pnp_curve_tracer_connections.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5593r_pnp_curve_tracer_connections.png" />
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">AD5593r PNP Curve Tracer Connections</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="hardware-setup">
 <h3>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Link to this heading"></a></h3>
-<p>The board utilizes the DC2472A battery emulator as input for cell voltage measurement. The DC2472A allows a cell voltage of 1.4 V (min) to 4.2 V (max). Follow below steps to set up the board for cell measurement:</p>
-<ol class="arabic">
-<li><p>Screw the two cell connector blocks to the two DC2472A battery emulators. Note that the first two terminals and the last terminal of each DC2472A cell connector must be left hanging (refer to below figure). Make sure to also set the last two terminals’ input to low voltage or equivalent range of roughly 1.4V per cell.</p>
-<figure class="align-default" id="id8">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/battery_emulator_pins.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/battery_emulator_pins.png" />
-<figcaption>
-<p><span class="caption-number">Figure 6 </span><span class="caption-text">DC2472A Battery Emulator Pins</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-</li>
-<li><p>Connect the DC2472A battery emulators to the ADBMSE2E3W-SL board through the cell connector blocks. Then, connect a micro-USB Type B cable to each DC2472A battery emulator and power the boards by connecting the other end of the cables to the Host PC.</p>
-<figure class="align-default" id="id9">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/usb_emulator.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/usb_emulator.png" />
-<figcaption>
-<p><span class="caption-number">Figure 7 </span><span class="caption-text">Connecting the DC2472A Battery Emulator</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-</li>
-<li><p>Set the DC2472A battery emulators to the lowest voltage by fully turning the Cell Voltage Adjustment Potentiometer counterclockwise.</p></li>
-<li><p>Attach the MAX32625PICO programmer to the AD-BMSE2E3W-SL board using the 10-pin ribbon SWD cable. Power the MAX32625PICO using a micro-USB to USB cable connected to the Host PC.</p>
-<figure class="align-default" id="id10">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/max32625_power_usb_pc.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/max32625_power_usb_pc.png" />
-<figcaption>
-<p><span class="caption-number">Figure 8 </span><span class="caption-text">Connecting the MAX32625PICO Programmer</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-</li>
-<li><p>Connect the alligator clip cable (red) to the VBATTP Pin or the 3rd of Pin 17 header of the DC2472A battery emulator. Then, insert the other end of the cable (banana jack plug) to TP16 (VBAT+ terminal) of the AD-BMSE2E3W-SL board.</p>
-<figure class="align-default" id="id11">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/connector_supply_vbattp.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/connector_supply_vbattp.png" />
-<figcaption>
-<p><span class="caption-number">Figure 9 </span><span class="caption-text">DC2472A’s VBATT+ Supply Connector to AD-BMSE2E3W-SL’s VBAT+ Terminal</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-</li>
-<li><p>Connect the alligator clip cable (black) to the GND (VBAT-) supply of the DC2472A battery emulator. Then, connect the other end of the cable to the Rsense (top side) of the AD-BMSE2E3W-SL.</p>
-<figure class="align-default" id="id12">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/gnd_vbat-_to_gnd_sense.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/gnd_vbat-_to_gnd_sense.png" />
-<figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">DC2472A’s VBAT- Supply Connector to AD-BMSE2E3W-SL’s Rsense</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-</li>
-<li><p>Set the DC2472A battery emulators to HIGH voltage or equivalent to 4.1 V per cell by turning the Cell Voltage Adjustment Potentiometer clockwise.</p></li>
-<li><p>Check the supply for the following test points as described in the diagram and table below. Make sure that the voltage levels are within the specified range.</p>
-<figure class="align-default" id="id13">
-<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/quick_test_points.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/quick_test_points.png" />
-<figcaption>
-<p><span class="caption-number">Figure 11 </span><span class="caption-text">AD-BMSE2E3W-SL Test Points</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-<div class="table-wrapper colwidths-given docutils container" id="id14">
-<table class="docutils align-default" id="id14">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">Hardware Supply Quick Test Point</span><a class="headerlink" href="#id14" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 15.0%" />
-<col style="width: 30.0%" />
-<col style="width: 35.0%" />
-<col style="width: 20.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>TP Name</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Function</p></th>
-<th class="head"><p>Voltage Range</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>TP2</p></td>
-<td><p>U1 ADBMS6830 BMS1_VREG</p></td>
-<td><p>U1 Input Voltage BMS1_VREG for ADBMS6830</p></td>
-<td><p>Low voltage: 15 V to 20 V</p></td>
-</tr>
-<tr class="row-odd"><td></td>
-<td></td>
-<td></td>
-<td><p>High voltage: (50 V to 58 V)</p></td>
-</tr>
-<tr class="row-even"><td><p>TP4</p></td>
-<td><p>U3 ADBMS6830 BMS2_VREG</p></td>
-<td><p>U3 Input Voltage BMS2_VREG input for ADBMS6830</p></td>
-<td><p>0 V to 5 V</p></td>
-</tr>
-<tr class="row-odd"><td><p>TP7</p></td>
-<td><p>U6 LTC3639 Output</p></td>
-<td><p>U6 LTC3639 Regulator Voltage Output</p></td>
-<td><p>4.5 V to 5.5 V</p></td>
-</tr>
-<tr class="row-even"><td><p>TP8</p></td>
-<td><p>U9 LT8303 Output</p></td>
-<td><p>U9 LT8303 Switch Down Regulator Output</p></td>
-<td><p>3.2 V to 3.5 V</p></td>
-</tr>
-<tr class="row-odd"><td><p>R346</p></td>
-<td><p>U15 MAX25301A Output</p></td>
-<td><p>U15 MAX25301A Output 3.3 V going to MCU</p></td>
-<td><p>3.2 V to 3.5V</p></td>
-</tr>
-<tr class="row-even"><td><p>(Left Pin)</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>TP16</p></td>
-<td><p>VBAT+</p></td>
-<td><p>Total Voltage Supply from battery</p></td>
-<td><p>72 V to 92 V (regulated)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li><p>Once all steps are completed, you are now ready to use this reference design and run the accompanying software found in the link below:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The AD-BMSE2E3W-SL comes complete with firmware examples and easy-to-use application GUI. Access the software resources and see the setup procedure in the AD-BMSE2E3W-SL Software User Guide.</p>
-</div>
-</li>
-</ol>
+<p>Raspberry Pi Setup:</p>
+<p>For Raspberry Pi Zero 2 W, 4, and 5, use the included ribbon cable to make the connection as shown in Figure 1</p>
+<p>&lt;&lt;Figure 1 - either cartoon or photo of ribbon cable connection&gt;&gt;</p>
+<p>For Raspberry Pi 400 and 500, use the included ribbon cable to make the connection as shown in Figure 2</p>
+<p>&lt;&lt;Figure 2 - either cartoon or photo of ribbon cable connection&gt;&gt;</p>
+<p>Feather Setup:</p>
+<p>Most Feather platform boards ship without peripheral headers installed. Refer to the board’s instructions, and install either:</p>
+<p>Downward-facing 100-mil post headers
+Stacking headers with posts extending from the reverse side of the board.
+Install the Feather on P20 as shown in Figure 3.</p>
+<p>&lt;&lt;Figure  - either cartoon or photo of Feather mounted to LSMSPG&gt;&gt;</p>
 </section>
-<section id="resources">
-<h3>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h3>
+<section id="software-setup">
+<h3>Software Setup<a class="headerlink" href="#software-setup" title="Link to this heading"></a></h3>
+<section id="raspberry-pi-setup">
+<h4>Raspberry Pi Setup<a class="headerlink" href="#raspberry-pi-setup" title="Link to this heading"></a></h4>
+<p>Prepare an SD card with ADI Kuiper Linux following the instructions at <cite>ADI Kuiper Linux Guide &lt;https://analogdevicesinc.github.io/documentation/linux/kuiper/index.html&gt;</cite>.
+Add the following to the end of <code class="docutils literal notranslate"><span class="pre">/boot/config.txt</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># config.txt additions
+
+dtoverlay=rpi-adalm-lsmspg
+
+# Heartbeat blinky:
+dtparam=act_led_gpio=20
+dtparam=act_led_trigger=heartbeat
+
+# Short GPIO21 (pin 40) to ground for shutdown:
+dtoverlay=gpio-shutdown,gpio_pin=21,active_low=1,gpiopull=up
+</pre></div>
+</div>
+<p>With the ADALM-LSMSPG connected, the heartbeat LED will begin beating on boot.
+The shutdown button is a convenient means of shutting down the Raspberry Pi
+properly in headless situations (no local monitor or keyboard). Press the
+shutdown button, wait 5 seconds after the heartbeat LED stops blinking, and
+then it is safe to remove power.</p>
+</section>
+<section id="max32666fthr-setup">
+<h4>MAX32666FTHR Setup<a class="headerlink" href="#max32666fthr-setup" title="Link to this heading"></a></h4>
+<p>The <cite>MAX32666FTHR &lt;https://www.analog.com/MAX32666FTHR&gt;</cite> includes a
+MAX32625PICO debugger that can be used to load the ADALM-LSMSPG firmware image.
+Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from:</p>
+<p><cite>MAX32625PICO firmware images &lt;https://github.com/analogdevicesinc/max32625pico-firmware-images&gt;</cite></p>
+<p>Leave the MAX32625PICO plugged in, and plug in the MAX32666FTHR using another
+USB-Micro cable. Connect the debug interface to the MAX32666FTHR with the supplied
+10-pin ribbon cable. Download the ADALM-LSMSPG tinyiiod firmware image
+(filename <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg.zip</span></code>) from:</p>
+<p><cite>ADALM-LSMSPG firmware (no-OS releases) &lt;https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit&gt;</cite></p>
+<p>Unzip the archive, copy the <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg_maxim_iio.hex</span></code> file, and paste it into
+the DAPLINK mass storage device (typically <code class="docutils literal notranslate"><span class="pre">D:</span></code> or <code class="docutils literal notranslate"><span class="pre">E:</span></code> on Windows systems).
+The DAPLINK drive will auto-eject, and the heartbeat LED on the ADALM-LSMSPG
+will begin blinking.</p>
+</section>
+<section id="application-setup">
+<h4>Application Setup<a class="headerlink" href="#application-setup" title="Link to this heading"></a></h4>
+<p>Detailed instructions for various application software examples are included in the
+<cite>Tools for Low-Speed Mixed Signal workshop &lt;https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html&gt;</cite>,
+as well as other supporting material. The underlying API for Raspberry Pi/Linux and
+bare-metal tinyiiod servers is <code class="docutils literal notranslate"><span class="pre">libiio</span></code>, which can be installed from: <cite>libiio documentation &lt;https://analogdevicesinc.github.io/libiio/index.html&gt;</cite></p>
+<p>Once installed, information about the ADALM-LSMSPG context can be displayed by running <code class="docutils literal notranslate"><span class="pre">iio_info</span></code> and passing the URI argument.</p>
+<p>For Kuiper Linux, the default hostname is <code class="docutils literal notranslate"><span class="pre">analog</span></code>. Example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>iio_info - network
+
+iio_info -s ip:analog.local
+</pre></div>
+</div>
+<p>For the MAX32666FTHR running the tinyiiod firmware, run:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>iio_info - serial
+
+iio_info -s serial:COM4
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">COM4</span></code> with the appropriate COM port number on Windows, or <code class="docutils literal notranslate"><span class="pre">/dev/ttyX</span></code> on Linux.</p>
+<p>The <em>Tools for Low-Speed Mixed-Signal System Design</em> tutorial contains many additional examples of communicating with the ADALM-MMSC.</p>
+</section>
+</section>
+<section id="additional-resources">
+<h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADBMS6830" target="_blank">ADBMS6830</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADBMS2950" target="_blank">ADBMS2950</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADBMS6822" target="_blank">ADBMS6822</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/MAX32690" target="_blank">MAX32690</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/LLT8303" target="_blank">LLT8303</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/ADUM225N" target="_blank">ADUM225N</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/LTC7001" target="_blank">LTC7001</a></p></li>
-<li><p><a class="icon adi reference external" href="https://www.analog.com/LTC3639" target="_blank">LTC3639</a></p></li>
+<li><p><cite>Tools for Low-Speed Mixed Signal Workshop &lt;https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html&gt;</cite></p></li>
+<li><p><cite>AD5592R Product Page &lt;https://analog.com/ad5592r&gt;</cite></p></li>
+<li><p><cite>AD5593R Product Page &lt;https://analog.com/ad5593r&gt;</cite></p></li>
+<li><p><cite>LM75 Product Page &lt;https://analog.com/lm75&gt;</cite></p></li>
 </ul>
 </section>
 <section id="design-integration-files">
 <h3>Design &amp; Integration Files<a class="headerlink" href="#design-integration-files" title="Link to this heading"></a></h3>
-<div class="admonition-download admonition">
-<p class="admonition-title">Download</p>
-<p><a class="reference external" href="ad-bmse2e3w-sl-designsupport.zip">AD-BMSE2E3W-SL Design Support Package</a></p>
 <ul class="simple">
 <li><p>Schematic</p></li>
 <li><p>PCB Layout</p></li>
 <li><p>Bill of Materials</p></li>
 <li><p>Allegro Project</p></li>
 </ul>
-</div>
 </section>
-</section>
-<section id="guides-sample-software">
-<h2>Guides&amp;Sample Software<a class="headerlink" href="#guides-sample-software" title="Link to this heading"></a></h2>
 </section>
 <section id="help-and-support">
 <h2>Help and Support<a class="headerlink" href="#help-and-support" title="Link to this heading"></a></h2>
-<p>For questions and more information, please visit the <a class="icon ez reference external" href="https://ez.analog.com/" target="_blank">EngineerZone Support Community</a>.</p>
+<p>For questions and more information, please visit the <a class="icon ez reference external" href="https://ez.analog.com/" target="_blank">EngineerZone Support Community</a> or contact your local ADI representative.</p>
 </section>
 </section>
 
