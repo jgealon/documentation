@@ -222,13 +222,7 @@ Design & Integration Files
 Guides&Sample Software
 ----------------------
 
-A software user-guide and sample application for :adi:`AD-BMSE2E3W-SL` are available:
 
-.. toctree::
-   :titlesonly:
-   :glob:
-
-   */index
 
 Help and Support
 ----------------
