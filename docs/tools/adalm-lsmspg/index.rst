@@ -93,14 +93,14 @@ Components and Connections
 
 - **P27**: ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.
 
-
 Refer to the table below for P16, P27 signal mapping.
+
 .. csv-table:: P16 and P27 Signal Mapping
    :file: p16-p27_signal_mapping.csv
    :widths: 30, 30
    :header-rows: 1
 
-- P31:  AD5592r GPIO, Reference connections.
+- P31:  AD5592r GPIO, Reference connections
 - P5 : AD5593r GPIO, Reference connections 
 
 Refer to the figure below for P2, P5 signal mapping.
