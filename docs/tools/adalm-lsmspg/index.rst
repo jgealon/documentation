@@ -57,7 +57,7 @@ System Architecture
 Specifications
 ++++++++++++++
 
-What’s Inside the Box?
+What's Inside the Box?
 ++++++++++++++++++++++
 
 Upon purchase of the ADALM-LSMSPG kit, the package comes with the following boards and accessories:
@@ -83,11 +83,16 @@ Components and Connections
 Components and Connections
 ++++++++++++++++++++++++++
 
-- P31: Raspberry Pi interface. Connect to Raspberry Pi 4, 400, 5, 500 via supplied ribbon cable. Be sure to observe polarity / pin 1 locaton.
-- P1, P28 : Feather interface. Pins or stacking headers must be installed on Feather platform board, with pins facing downward.
-Note: The Raspberry Pi and Feather interfaces are mutually exclusive.
-- P16 : ADALM2000 interface. Allows monitoring of digital traffic on the I2C, SPI, and various GPIO signals. 
-- P27 : ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.
+- **P31**: Raspberry Pi interface. Connect to Raspberry Pi 4, 400, 5, 500 via supplied ribbon cable. Be sure to observe polarity / pin 1 locaton.
+
+- **P1**, **P28**: Feather interface. Pins or stacking headers must be installed on Feather platform board, with pins facing downward.
+
+*Note:* The Raspberry Pi and Feather interfaces are mutually exclusive.
+
+- **P16**: ADALM2000 interface. Allows monitoring of digital traffic on the I2C, SPI, and various GPIO signals.
+
+- **P27**: ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.
+
 
 Refer to the table below for P16, P27 signal mapping.
 .. csv-table:: P16 and P27 Signal Mapping
