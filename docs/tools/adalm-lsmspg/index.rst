@@ -50,9 +50,10 @@ Applications
 System Architecture
 +++++++++++++++++++
 
-.. figure:: tools/adalm-lsmspg/adalm-lsmspg_block_diagram.png
+.. figure:: adalm-lsmspg_block_diagram.png
 
-   ADALM-LSMSPG Simplified Block Diagram
+   ADALM-LSMSPG System Architecture
+   
 
 Specifications
 ++++++++++++++
