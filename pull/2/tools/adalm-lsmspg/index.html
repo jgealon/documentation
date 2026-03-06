@@ -704,13 +704,9 @@ Content on this topic
 <li><p><strong>P27</strong>: ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.</p></li>
 </ul>
 <p>Refer to the table below for P16, P27 signal mapping.</p>
-<div class="table-wrapper colwidths-given docutils container" id="id6">
+<div class="table-wrapper docutils container" id="id6">
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">P16 and P27 Signal Mapping</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 50.0%" />
-<col style="width: 50.0%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>ADALM2000</p></th>
 <th class="head"><p>ADALM-LSMSPG Signal</p></th>
@@ -767,13 +763,9 @@ Content on this topic
 </section>
 <section id="address-selection-jumpers">
 <h3>Address Selection Jumpers<a class="headerlink" href="#address-selection-jumpers" title="Link to this heading"></a></h3>
-<div class="table-wrapper colwidths-given docutils container" id="id8">
+<div class="table-wrapper docutils container" id="id8">
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-number">Table 2 </span><span class="caption-text">P4 Address Selection Jumpers</span><a class="headerlink" href="#id8" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 50.0%" />
-<col style="width: 50.0%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>P4</p></th>
 <th class="head"><p>AD5593r I2C Address</p></th>
@@ -789,13 +781,9 @@ Content on this topic
 </tbody>
 </table>
 </div>
-<div class="table-wrapper colwidths-given docutils container" id="id9">
+<div class="table-wrapper docutils container" id="id9">
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-number">Table 3 </span><span class="caption-text">P9 Address Selection Jumpers</span><a class="headerlink" href="#id9" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 50.0%" />
-<col style="width: 50.0%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>P9</p></th>
 <th class="head"><p>LM75 I2C Address</p></th>
@@ -880,13 +868,11 @@ then it is safe to remove power.</p>
 <h4>MAX32666FTHR Setup<a class="headerlink" href="#max32666fthr-setup" title="Link to this heading"></a></h4>
 <p>The <a class="icon link reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> includes a
 MAX32625PICO debugger that can be used to load the ADALM-LSMSPG firmware image.
-Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from:</p>
-<p><a class="icon link reference external" href="https://github.com/analogdevicesinc/max32625pico-firmware-images" target="_blank">MAX32625PICO firmware images</a></p>
+Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from: <a class="icon link reference external" href="https://github.com/analogdevicesinc/max32625pico-firmware-images" target="_blank">MAX32625PICO firmware images</a></p>
 <p>Leave the MAX32625PICO plugged in, and plug in the MAX32666FTHR using another
 USB-Micro cable. Connect the debug interface to the MAX32666FTHR with the supplied
 10-pin ribbon cable. Download the ADALM-LSMSPG tinyiiod firmware image
-(filename <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg.zip</span></code>) from:</p>
-<p><a class="icon link reference external" href="https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit" target="_blank">ADALM-LSMSPG firmware (no-OS releases)</a></p>
+(filename <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg.zip</span></code>) from: <a class="icon link reference external" href="https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit" target="_blank">ADALM-LSMSPG firmware (no-OS releases)</a></p>
 <p>Unzip the archive, copy the <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg_maxim_iio.hex</span></code> file, and paste it into
 the DAPLINK mass storage device (typically <code class="docutils literal notranslate"><span class="pre">D:</span></code> or <code class="docutils literal notranslate"><span class="pre">E:</span></code> on Windows systems).
 The DAPLINK drive will auto-eject, and the heartbeat LED on the ADALM-LSMSPG

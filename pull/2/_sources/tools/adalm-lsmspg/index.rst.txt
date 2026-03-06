@@ -98,7 +98,6 @@ Refer to the table below for P16, P27 signal mapping.
 
 .. csv-table:: P16 and P27 Signal Mapping
    :file: p16-p27_signal_mapping.csv
-   :widths: 30, 30
    :header-rows: 1
 
 - P31:  AD5592r GPIO, Reference connections
@@ -116,12 +115,10 @@ Address Selection Jumpers
 
 .. csv-table:: P4 Address Selection Jumpers
    :file: ad5593r_i2c_address.csv
-   :widths: 30, 30
    :header-rows: 1
 
 .. csv-table:: P9 Address Selection Jumpers
    :file: lm75_i2c_address.csv
-   :widths: 30, 30
    :header-rows: 1
 
 
@@ -205,16 +202,12 @@ MAX32666FTHR Setup
 
 The `MAX32666FTHR <https://www.analog.com/MAX32666FTHR>`_ includes a
 MAX32625PICO debugger that can be used to load the ADALM-LSMSPG firmware image.
-Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from:
-
-`MAX32625PICO firmware images <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
+Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from: `MAX32625PICO firmware images <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
 
 Leave the MAX32625PICO plugged in, and plug in the MAX32666FTHR using another
 USB-Micro cable. Connect the debug interface to the MAX32666FTHR with the supplied
 10-pin ribbon cable. Download the ADALM-LSMSPG tinyiiod firmware image
-(filename ``adalm-lsmspg.zip``) from:
-
-`ADALM-LSMSPG firmware (no-OS releases) <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
+(filename ``adalm-lsmspg.zip``) from: `ADALM-LSMSPG firmware (no-OS releases) <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
 
 Unzip the archive, copy the ``adalm-lsmspg_maxim_iio.hex`` file, and paste it into
 the DAPLINK mass storage device (typically ``D:`` or ``E:`` on Windows systems).
