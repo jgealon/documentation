@@ -96,7 +96,7 @@ Components and Connections
 
 Refer to the table below for P16, P27 signal mapping.
 .. csv-table:: P16 and P27 Signal Mapping
-   :file: p16_p27_signal_mapping.csv
+   :file: p16-p27_signal_mapping.csv
    :widths: 30, 30
    :header-rows: 1
 
