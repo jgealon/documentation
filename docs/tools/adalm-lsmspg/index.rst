@@ -64,7 +64,7 @@ What's Inside the Box?
 
 Upon purchase of the ADALM-LSMSPG kit, the package comes with the following boards and accessories:
 
-.. figure:: ad-bmse2e3w_package_contents.png
+.. figure:: ad-bmse2e3w-sl_package_contents.png
 
    ADALM-LSMSPG Kit Contents
 
