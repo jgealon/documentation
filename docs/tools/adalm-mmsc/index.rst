@@ -83,10 +83,6 @@ Package Contents
 Components and Connections
 ++++++++++++++++++++++++++
 
-.. figure:: package_contents.png
-
-   Hardware Components and Connections
-
 .. csv-table:: Jumper Configurations
    :file: jumper_configurations.csv
    :widths: 5, 25, 60
@@ -97,6 +93,14 @@ Components and Connections
    :widths: 5, 25, 60
    :header-rows: 1
 
+.. figure:: primary_side.png
+
+   ADALM-MMSC Primary Side
+
+.. figure:: secondary_side.png
+
+   ADALM-MMSC Secondary Side
+   
 Quick Start
 +++++++++++
 
