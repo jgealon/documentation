@@ -1,74 +1,58 @@
 ADALM-LSMSPG
 ============
 
-Advanced Active Learning Module for Signal Chain Exploration and Design.
-
-A concise version of this document is available in portable document format.
-Click on the file below to download:
-
-.. admonition:: Download
-
-   :download:`ADALM-MMSC QuickStart Guide (pdf) <ad-bmse2e3w-sl-ug-2245.pdf>`
+Active Learning Module for Low‑Speed Mixed‑Signal Exploration and Prototyping.
 
 Overview
 --------
 
-.. figure:: adalm-mmsc_angle.jpg
+.. figure:: adalm-lsmspg_angle.jpeg
    :align: left
 
-   ADALM-MMSC
+   ADALM-LSMSPG
 
-The :adi:`ADALM-MMSC (Analog Devices Active Learning Module - Mixed-Mode Signal Chain)` is an educational board that facilitates hands-on exploration of fundamental signal chain concepts.
+The :adi:`ADALM-LSMSPG (Analog Devices Active Learning Module - Low-Speed Mixed-Signal Playground)` facilitates hands-on learning of concepts related to software interfacing to hardware peripherals.
 
-The core of the circuit is the AD4080, 40-Msps oversampling SAR analog to digital converter (ADC) with configurable digital filter and internal data capture memory (single-port FIFO).
+It consists of two 8-channel multifunction ADC/DAC/digital GPIOs -  AD5592r and AD5593r - which have SPI and I2C interfaces, respectively.
 
-The board includes a highly configurable 2nd order analog filter with adjustable cutoff frequencies, input attenuation, and filter gain.
+The AD5592r includes a simple NPN transistor curve tracer circuit as a representative instrumentation application.
 
-An onboard selectable clock source provides sample rates from 5 Msps to 40 Msps. A MAX32666FTHR microcontroller runs an IIO server over a serial backend, allowing the use of standard tools such as Scopy, IIO Oscilloscope, Pyadi-iio, and ADI's MATLAB precision toolbox.
+The AD5593r includes a PNP curve tracer, and both devices include bi-color LEDs for "Hello, World!" applications.
 
-The Libiio library provides language bindings for C, C#, MATLAB, Python, and other languages.
+An LM75 temperature sensor is also included as a "bare minimum" peripheral example.
 
-Concepts demonstrated include:
-
-- Digital filtering
-- Analog vs. digital anti alias filtering
-- Properties of different digital filters
-- Noise Analysis
-- Reference noise
+The ADALM-LSMSPG is compatible with Raspberry Pi and Feather form factor hosts, and an ADALM2000 interface allows monitoring of the SPI and I2C busses for driver development and debug.
 
 Features
 ++++++++
 
-- Multiple input connections
-   - 100-mil posts compatible with the ADALM2000
-   - SMA connections for benchtop signal generators
-   - 1/8-inch phono jack for connection to sound cards and other audio sources
-- Selectable input attenuator
-   - 3:5 attenuation allows +/-5 V input swing
-   - 3:50, 3:500 allows testing with low-amplitude signals for dynamic range measurements
-- Configurable Sallen-Key filter with low-noise amplifier
-   - Cutoff frequencies between XX kHz and YY kHz
-   - Gains of unity, 2, and 5 for exploring noise optimization
-- Onboard fully-differential amplifier
-   - Allows arbitrary input signals
-   - Input and output test connections for monitoring of all critical points
-- Onboard low-noise reference
-   - Flagship LTC6655 for optimal performance
-   - "Reference Corruption" input allows noise and interfering tones to be introduced and their effects observed
-- Selectable conversion rates from 5 Msps to 40 Msps allows observation of aliasing, ADC noise density vs. sample rate
+- Compatible with Raspberry Pi platforms
+- Compatible with Feather platforms
+   - MAX32666FTHR
+   - MAX32655FTHR
+   - Other Feather platforms supporting 3.3V I/O
+- ADALM2000 interface for digital debug
+- AD5592r SPI 8-channel ADC/DAC/GPIO
+- AD5593r I2C 8-channel ADC/DAC/GPIO
+- NPN and PNP transistor curve tracer example application circuits
+- LM75 temperature sensor
+- SPI and I2C Pmod expansion headers
 
 Applications
 ++++++++++++
 
-- Mixed Signal and Digital Signal Processing experiments, workshops, and lab exercises
-- Precision data acquisition
+- Demonstrating peripheral interfacing and software software for:
+   - Embedded Linux
+   - no-OS (Bare Metal)
+   - Zephyr
+   - Arduino
 
 System Architecture
 +++++++++++++++++++
 
-.. figure:: updated_block_diagram_72vto96v.png
+.. figure:: ADALM-LSMSPG_block_diagram.png
 
-   ADALM-MMSC Simplified Block Diagram
+   ADALM-LSMSPG Simplified Block Diagram
 
 .. csv-table:: Specifications
    :file: specifications.csv
@@ -78,11 +62,11 @@ System Architecture
 What's Inside the Box?
 ++++++++++++++++++++++
 
-Upon purchase of the ADALM-MMSC kit, the package comes with the following boards and accessories:
+Upon purchase of the ADALM-LSMSPG kit, the package comes with the following boards and accessories:
 
 .. figure:: ad-bmse2e3w-sl_package_contents.png
 
-   ADALM-MMSC Kit Contents
+   ADALM-LSMSPG Kit Contents
 
 Components and Connections
 ++++++++++++++++++++++++++
@@ -238,13 +222,7 @@ Design & Integration Files
 Guides&Sample Software
 ----------------------
 
-A software user-guide and sample application for :adi:`AD-BMSE2E3W-SL` are available:
 
-.. toctree::
-   :titlesonly:
-   :glob:
-
-   */index
 
 Help and Support
 ----------------
