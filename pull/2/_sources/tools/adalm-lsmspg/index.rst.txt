@@ -99,6 +99,8 @@ Refer to the table below for P16, P27 signal mapping.
 .. csv-table:: P16 and P27 Signal Mapping
    :file: p16-p27_signal_mapping.csv
    :header-rows: 1
+   :widths: 35, 65
+   :class: left-table
 
 - P31:  AD5592r GPIO, Reference connections
 - P5 : AD5593r GPIO, Reference connections 
@@ -116,10 +118,14 @@ Address Selection Jumpers
 .. csv-table:: P4 Address Selection Jumpers
    :file: ad5593r_i2c_address.csv
    :header-rows: 1
+   :widths: 35, 65
+   :class: left-table
 
 .. csv-table:: P9 Address Selection Jumpers
    :file: lm75_i2c_address.csv
    :header-rows: 1
+   :widths: 35, 65
+   :class: left-table
 
 
 System Monitor/Control
