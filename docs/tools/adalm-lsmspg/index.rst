@@ -105,12 +105,15 @@ Refer to the table below for P16, P27 signal mapping.
 - P5 : AD5593r GPIO, Reference connections 
 
 Refer to the figure below for P2, P5 signal mapping.
+
 .. figure:: ad559xr_gpio_pin.png
 
    P2 and P5 Signal Mapping
 
+
 Address Selection Jumpers
 +++++++++++++++++++++++++
+
 .. csv-table:: P4 Address Selection Jumpers
    :file: ad5593r_i2c_address.csv
    :widths: 30, 30
@@ -120,6 +123,7 @@ Address Selection Jumpers
    :file: lm75_i2c_address.csv
    :widths: 30, 30
    :header-rows: 1
+
 
 System Monitor/Control
 ++++++++++++++++++++++
@@ -132,7 +136,7 @@ Curve Tracer Application Circuits
 
 The AD5592r and AD5593r drive simple NPN and PNP (respectively) curve tracer circuits. 
 This represents a simple DC test instrument that involves the "set a current, set a voltage, take a measurement, do some math, step, repeat" sequence of operations. 
-The details of the experiments are covered in the `Tools for LSMSPG Lesson <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`.
+The details of the experiments are covered in the `Tools for LSMSPG Lesson <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`_.
 
 .. figure:: ad5592r_npn_curve_tracer_connections.png
 
@@ -173,7 +177,7 @@ Software Setup
 Raspberry Pi Setup
 ^^^^^^^^^^^^^^^^^^
 
-Prepare an SD card with ADI Kuiper Linux following the instructions at `ADI Kuiper Linux Guide <https://analogdevicesinc.github.io/documentation/linux/kuiper/index.html>`.
+Prepare an SD card with ADI Kuiper Linux following the instructions at `ADI Kuiper Linux Guide <https://analogdevicesinc.github.io/documentation/linux/kuiper/index.html>`_.
 Add the following to the end of ``/boot/config.txt``:
 
 .. code-block:: none
@@ -199,18 +203,18 @@ then it is safe to remove power.
 MAX32666FTHR Setup
 ^^^^^^^^^^^^^^^^^^
 
-The `MAX32666FTHR <https://www.analog.com/MAX32666FTHR>` includes a
+The `MAX32666FTHR <https://www.analog.com/MAX32666FTHR>`_ includes a
 MAX32625PICO debugger that can be used to load the ADALM-LSMSPG firmware image.
 Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from:
 
-`MAX32625PICO firmware images <https://github.com/analogdevicesinc/max32625pico-firmware-images>`
+`MAX32625PICO firmware images <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
 
 Leave the MAX32625PICO plugged in, and plug in the MAX32666FTHR using another
 USB-Micro cable. Connect the debug interface to the MAX32666FTHR with the supplied
 10-pin ribbon cable. Download the ADALM-LSMSPG tinyiiod firmware image
 (filename ``adalm-lsmspg.zip``) from:
 
-`ADALM-LSMSPG firmware (no-OS releases) <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`
+`ADALM-LSMSPG firmware (no-OS releases) <https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit>`_
 
 Unzip the archive, copy the ``adalm-lsmspg_maxim_iio.hex`` file, and paste it into
 the DAPLINK mass storage device (typically ``D:`` or ``E:`` on Windows systems).
@@ -221,9 +225,9 @@ Application Setup
 ^^^^^^^^^^^^^^^^^
 
 Detailed instructions for various application software examples are included in the
-`Tools for Low-Speed Mixed Signal workshop <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`,
+`Tools for Low-Speed Mixed Signal workshop <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`_,
 as well as other supporting material. The underlying API for Raspberry Pi/Linux and
-bare-metal tinyiiod servers is ``libiio``, which can be installed from: `libiio documentation <https://analogdevicesinc.github.io/libiio/index.html>`
+bare-metal tinyiiod servers is ``libiio``, which can be installed from: `libiio documentation <https://analogdevicesinc.github.io/libiio/index.html>`_
 
 Once installed, information about the ADALM-LSMSPG context can be displayed by running ``iio_info`` and passing the URI argument.
 
@@ -250,10 +254,10 @@ The *Tools for Low-Speed Mixed-Signal System Design* tutorial contains many addi
 Additional Resources
 ++++++++++++++++++++
 
-- `Tools for Low-Speed Mixed Signal Workshop <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`
-- `AD5592R Product Page <https://analog.com/ad5592r>`
-- `AD5593R Product Page <https://analog.com/ad5593r>`
-- `LM75 Product Page <https://analog.com/lm75>`
+- `Tools for Low-Speed Mixed Signal Workshop <https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html>`_
+- `AD5592R Product Page <https://analog.com/ad5592r>`_
+- `AD5593R Product Page <https://analog.com/ad5593r>`_
+- `LM75 Product Page <https://analog.com/lm75>`_
 
 Design & Integration Files
 ++++++++++++++++++++++++++
