@@ -100,10 +100,10 @@ Refer to the table below for P16, P27 signal mapping.
    :file: p16-p27_signal_mapping.csv
    :header-rows: 1
    :widths: 35, 65
-   :class: left-table
+   :class: fullwidth
 
-- P31:  AD5592r GPIO, Reference connections
-- P5 : AD5593r GPIO, Reference connections 
+- **P31**:  AD5592r GPIO, Reference connections
+- **P5**: AD5593r GPIO, Reference connections 
 
 Refer to the figure below for P2, P5 signal mapping.
 
@@ -119,13 +119,13 @@ Address Selection Jumpers
    :file: ad5593r_i2c_address.csv
    :header-rows: 1
    :widths: 35, 65
-   :class: left-table
+   :class: fullwidth
 
 .. csv-table:: P9 Address Selection Jumpers
    :file: lm75_i2c_address.csv
    :header-rows: 1
    :widths: 35, 65
-   :class: left-table
+   :class: fullwidth
 
 
 System Monitor/Control
@@ -154,7 +154,7 @@ The PNP curve tracer has two options for the emitter drive: AD5593r CH3 (default
 Hardware Setup
 ++++++++++++++
 
-Raspberry Pi Setup:
+- **Raspberry Pi Setup**:
 
 For Raspberry Pi Zero 2 W, 4, and 5, use the included ribbon cable to make the connection as shown in Figure 1
 
@@ -170,7 +170,7 @@ For Raspberry Pi 400 and 500, use the included ribbon cable to make the connecti
    RPi 400/500 and ADALM-LSMSPG with 40-pin Ribbon Cable Connection 
 
 
-Feather Setup:
+- **Feather Setup**:
 
 Most Feather platform boards ship without peripheral headers installed. Refer to the board's instructions, and install either:
 
