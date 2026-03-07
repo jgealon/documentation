@@ -158,11 +158,17 @@ Raspberry Pi Setup:
 
 For Raspberry Pi Zero 2 W, 4, and 5, use the included ribbon cable to make the connection as shown in Figure 1
 
-<<Figure 1 - either cartoon or photo of ribbon cable connection>>
+.. figure:: rpi-4_5_w_with_lsmspg.png
+
+   RPi Zero 2W/4/5 and ADALM-LSMSPG with 40-pin Ribbon Cable Connection 
+
 
 For Raspberry Pi 400 and 500, use the included ribbon cable to make the connection as shown in Figure 2
 
-<<Figure 2 - either cartoon or photo of ribbon cable connection>>
+.. figure:: rpi-400or500_with_lsmspg.png
+
+   RPi 400/500 and ADALM-LSMSPG with 40-pin Ribbon Cable Connection 
+
 
 Feather Setup:
 
@@ -170,9 +176,12 @@ Most Feather platform boards ship without peripheral headers installed. Refer to
 
 Downward-facing 100-mil post headers
 Stacking headers with posts extending from the reverse side of the board.
-Install the Feather on P20 as shown in Figure 3.
+Install the Feather on P20 as shown in Figure below.
 
-<<Figure  - either cartoon or photo of Feather mounted to LSMSPG>>
+.. figure:: max32666fthr_on_adalm-lsmspg.png
+
+   Feather Mounted on ADALM-LSMSPG
+
 
 Software Setup
 ++++++++++++++
