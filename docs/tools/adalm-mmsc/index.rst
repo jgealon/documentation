@@ -180,12 +180,11 @@ and the firmware will be upgraded.
 Design & Integration Files
 ++++++++++++++++++++++++++
 
-   * Schematic
-   * PCB Layout
-   * Bill of Materials
-   * Allegro Project
+   * :download: `Schematic <doc/tools/adalm-mmsc/adalm-mmsc_revb_schematic.pdf>`_
+   * :download: `PCB Layout <doc/tools/adalm-mmsc/adalm-mmsc_revb_pcb_layout.pdf>`_
+   * :download: `Bill of Materials <doc/tools/adalm-mmsc/adalm-mmsc_revb_bom.csv>`_
+   * :download: `Allegro Project <doc/tools/adalm-mmsc/adalm-mmsc_revb_allegro_files.zip>`_
    * Simulation Files
-
 
 Help and Support
 ----------------
