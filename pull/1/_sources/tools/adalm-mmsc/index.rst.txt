@@ -126,7 +126,6 @@ In this configuration, the M2K's waveform generator outputs are connected to the
 
    ADALM2000 (M2K) to ADALM-MMSC Hardware Setup
    
-
 A. Connect the two black GND wires from the ADALM2000 to P17, lower two posts (pins 3 and 4).
 B. Connect the solid yellow W1 wire from the ADALM2000 to P17, pin 1.
 C. Connect the striped yellow W2 wire from the ADALM2000 to P17, pin 2.
