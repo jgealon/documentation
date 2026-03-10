@@ -183,9 +183,9 @@ Design & Integration Files
 .. admonition:: Download
 
    - :download:`Schematic (pdf) <adalm-mmsc_revb_schematic.pdf>`
-   - :download: `PCB Layout (pdf) <doc/tools/adalm-mmsc/adalm-mmsc_revb_layout.pdf>`
-   - :download: `Bill of Materials <doc/tools/adalm-mmsc/adalm-mmsc_revb_bom.csv>`
-   - :download: `Allegro Project <doc/tools/adalm-mmsc/adalm-mmsc_revb_allegro_files.zip>`
+   - :download: `PCB Layout (pdf) <adalm-mmsc_revb_layout.pdf>`
+   - :download: `Bill of Materials (csv) <adalm-mmsc_revb_bom.csv>`
+   - :download: `Allegro Project (zip) <adalm-mmsc_revb_allegro_files.zip>`
    - Simulation Files
 
 
