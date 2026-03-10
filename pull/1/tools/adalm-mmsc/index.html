@@ -104,6 +104,7 @@
 <li><a class="reference internal" href="#components-and-connections">Components and Connections</a></li>
 <li><a class="reference internal" href="#quick-start">Quick Start</a><ul>
 <li><a class="reference internal" href="#equipment-needed">Equipment Needed</a></li>
+<li><a class="reference internal" href="#hardware-setup">Hardware Setup</a></li>
 <li><a class="reference internal" href="#software-needed">Software Needed</a></li>
 </ul>
 </li>
@@ -856,43 +857,72 @@ Content on this topic
 </li>
 </ul>
 </section>
+<section id="hardware-setup">
+<h4>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Link to this heading"></a></h4>
+<p>The hardware setup uses the ADALM2000 (M2K) as the primary signal source for the system as shown in the image below.
+In this configuration, the M2K’s waveform generator outputs are connected to the designated input pins on the ADALM-MMSC board, allowing the board to receive and process the injected test signals.</p>
+<figure class="align-default" id="id8">
+<img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/adalm-mmsc_hardware_setup.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/adalm-mmsc_hardware_setup.png" />
+<figcaption>
+<p><span class="caption-number">Figure 6 </span><span class="caption-text">ADALM2000 (M2K) to ADALM-MMSC Hardware Setup</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><ol class="upperalpha simple">
+<li><p>Connect the two black GND wires from the ADALM2000 to P17, lower two posts (pins 3 and 4).</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Connect the solid yellow W1 wire from the ADALM2000 to P17, pin 1.</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="3">
+<li><p>Connect the striped yellow W2 wire from the ADALM2000 to P17, pin 2.</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="4">
+<li><p>Connect the ADALM2000 and ADALM-MMSC to the host computer with two USB-micro cables.</p></li>
+</ol>
+</li>
+</ul>
+</section>
 <section id="software-needed">
 <h4>Software Needed<a class="headerlink" href="#software-needed" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p>Requires <a class="icon link reference external" href="https://analogdevicesinc.github.io/scopy/index.html" target="_blank">Scopy 2.1 or newer</a>.</p></li>
 <li><p>Connect the ADALM-MMSC to the host computer using the USB-A to USB-Micro cable, and open the Scopy GUI. If you are using the ADALM2000, connect the instrument and allow the calibration to complete. The next step is to add the ADALM-MMSC connection. Click the “+” button in the Scopy home screen as shown in the figure below.</p></li>
 </ul>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id9">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_add_device.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_add_device.png" />
 <figcaption>
-<p><span class="caption-number">Figure 6 </span><span class="caption-text">Adding the ADALM-MMSC in Scopy</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 7 </span><span class="caption-text">Adding the ADALM-MMSC in Scopy</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Click the “Scan” button, and select the ADALM-MMSC’s serial port. There may be more than one serial port, depending on what other devices are connected to the host machine.</p></li>
 </ul>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_scan.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_scan.png" />
 <figcaption>
-<p><span class="caption-number">Figure 7 </span><span class="caption-text">Scanning for the ADALM-MMSC Serial Port</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 8 </span><span class="caption-text">Scanning for the ADALM-MMSC Serial Port</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Click Verify, then Add Device.</p></li>
 </ul>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id11">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_verify.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_verify.png" />
 <figcaption>
-<p><span class="caption-number">Figure 8 </span><span class="caption-text">Verifying the ADALM-MMSC Connection</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 9 </span><span class="caption-text">Verifying the ADALM-MMSC Connection</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>From the home screen, click Connect.</p></li>
 </ul>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id12">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_connect.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_connect.png" />
 <figcaption>
-<p><span class="caption-number">Figure 9 </span><span class="caption-text">Connecting to the ADALM-MMSC in Scopy</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 10 </span><span class="caption-text">Connecting to the ADALM-MMSC in Scopy</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul>
@@ -905,10 +935,10 @@ Content on this topic
 </div></blockquote>
 </li>
 </ul>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id13">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_adc_time.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-mmsc/docs/tools/adalm-mmsc/scopy_adc_time.png" />
 <figcaption>
-<p><span class="caption-number">Figure 10 </span><span class="caption-text">ADC Time Domain Capture in Scopy</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 11 </span><span class="caption-text">ADC Time Domain Capture in Scopy</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">

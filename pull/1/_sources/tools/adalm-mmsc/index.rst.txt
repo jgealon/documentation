@@ -116,6 +116,22 @@ Equipment Needed
    - Generators in the audio range work great
    - PC sound card with Audacity is another option
 
+Hardware Setup
+^^^^^^^^^^^^^^
+
+The hardware setup uses the ADALM2000 (M2K) as the primary signal source for the system as shown in the image below. 
+In this configuration, the M2K's waveform generator outputs are connected to the designated input pins on the ADALM-MMSC board, allowing the board to receive and process the injected test signals. 
+
+.. figure:: adalm-mmsc_hardware_setup.png
+
+   ADALM2000 (M2K) to ADALM-MMSC Hardware Setup
+   
+
+- A. Connect the two black GND wires from the ADALM2000 to P17, lower two posts (pins 3 and 4).
+- B. Connect the solid yellow W1 wire from the ADALM2000 to P17, pin 1.
+- C. Connect the striped yellow W2 wire from the ADALM2000 to P17, pin 2.
+- D. Connect the ADALM2000 and ADALM-MMSC to the host computer with two USB-micro cables.
+
 
 Software Needed
 ^^^^^^^^^^^^^^^
