@@ -1,3 +1,5 @@
+.. _adalm-mmsc:
+
 ADALM-MMSC
 ==========
 
