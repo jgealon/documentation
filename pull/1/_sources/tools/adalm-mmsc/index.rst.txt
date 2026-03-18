@@ -8,6 +8,7 @@ Overview
 
 .. figure:: adalm-mmsc_angle.jpg
    :align: left
+   :width: 600 px
 
    ADALM-MMSC Board
 
@@ -77,26 +78,33 @@ System Architecture
 
    ADALM-MMSC Simplified Block Diagram
 
-What's Inside the Box?
-++++++++++++++++++++++
+Package Contents
+++++++++++++++++
 
 The ADALM-MMSC kit includes the following boards and accessories:
 
 .. figure:: package_contents.png
+   :width: 800 px
 
    ADALM-MMSC Kit Contents
 
-Package Contents
-++++++++++++++++
+- (A.) 1x :adi:`ADALM-MMSC Board`
+- (B.) 1x Pre-programmed :adi:`MAX32666FTHR` board
+- (C.) 1x USB-A to Micro-USB cable
+- (D.) 1x :adi:`MAX32625PICO` with 10-pin ribbon cable for SWD connection (for future firmware upgrades)
 
-- 1x ADALM-MMSC Board
-- 1x Pre-programmed MAX32666FTHR board
-- 1x USB-A to Micro-USB cable
-- 1x MAX32625PICO with 10-pin ribbon cable for SWD connection 
-  (for future firmware upgrades)
+----
 
 Components and Connections
-++++++++++++++++++++++++++
+--------------------------
+
+.. figure:: primary_side.png
+
+   ADALM-MMSC Primary Side
+
+.. figure:: secondary_side.png
+
+   ADALM-MMSC Secondary Side
 
 .. csv-table:: Jumper Configurations
    :file: jumper_configurations.csv
@@ -108,16 +116,10 @@ Components and Connections
    :widths: 5, 25, 60
    :header-rows: 1
 
-.. figure:: primary_side.png
-
-   ADALM-MMSC Primary Side
-
-.. figure:: secondary_side.png
-
-   ADALM-MMSC Secondary Side
+----
    
 Quick Start
-+++++++++++
+-----------
 
 There are numerous combinations of signal sources, signal analyzers, and
 software that can be used with the ADALM-MMSC. The most straightforward
@@ -127,18 +129,18 @@ with instrument-specific control panels for various hardware, including
 the :adi:`ADALM2000`.
 
 
-Equipment Needed
-^^^^^^^^^^^^^^^^
+**Equipment Needed**
 
-- 1x ADALM-MMSC Board (as DUT)
+- 1x ADALM-MMSC Board (as Device Under Test)
 - Windows, Mac, or Linux host computer with an available USB port
 - Signal generator such as the :ref:`ADALM2000<m2k>` or similar
+  Alternative signal sources include:
 
    - Generators in the audio range work well
    - A PC sound card with Audacity is another option
 
 Hardware Setup
-^^^^^^^^^^^^^^
+--------------
 
 The hardware setup uses the :adi:`ADALM2000` (M2K) as the primary signal source
 for the system, as shown in the image below. In this configuration, the M2K's
@@ -156,14 +158,15 @@ ADALM-MMSC board, allowing the board to receive and process test signals.
 4. Connect both the ADALM2000 and the ADALM‑MMSC to the host computer 
    using two micro‑USB cables.
 
-Software Needed
-^^^^^^^^^^^^^^^
+Software Setup
+--------------
 
-Requires `Scopy 2.1 or newer
-<https://analogdevicesinc.github.io/scopy/index.html>`_.
+**Requirement:**
 
-Procedure
-^^^^^^^^^
+.. admonition:: Download
+
+   :download:`Scopy 2.1 or newer <https://analogdevicesinc.github.io/scopy/index.html>`
+
 
 1. Connect the **ADALM‑MMSC** to the host computer using a
    **USB‑A to USB‑Micro** cable, then open the **Scopy** GUI.
@@ -223,12 +226,11 @@ Firmware Upgrades
 
 1. Access the ADALM‑MMSC firmware source from the no‑OS repository:
 
-   `ADALM‑MMSC firmware (no‑OS)
-   <https://github.com/analogdevicesinc/no-OS/tree/main/projects/adalm-mmsc>`_
+   :git-no-OS:`ADALM‑MMSC firmware (no‑OS) <projects/adalm-mmsc>`.
 
 2. Download the pre‑built firmware binaries from the no‑OS releases page:
 
-   :git-no-OS:`ADALM‑MMSC releases </releases/tag/last_commit>`
+   :git-no-OS:`ADALM‑MMSC releases <releases/tag/last_commit>`
 
    The firmware package is provided as ``adalm-mmsc.zip``.
 
@@ -240,7 +242,7 @@ Firmware Upgrades
    `MAX32625PICO firmware images
    <https://github.com/analogdevicesinc/max32625pico-firmware-images>`_
 
-5. Connect the 10‑pin ribbon cable between the MAX32625PICO and the
+5. Connect the 10‑pin ribbon cable between the **MAX32625PICO** and the
    **MAX32666FTHR** board.
 
 6. Drag and drop the file
@@ -249,6 +251,11 @@ Firmware Upgrades
 
 7. Wait for the DAPLINK drive to automatically eject, indicating that the
    firmware upgrade has completed successfully.
+
+----
+
+Resources
+---------
 
 Design & Integration Files
 ++++++++++++++++++++++++++
@@ -262,8 +269,8 @@ Design & Integration Files
     * Bill of Materials
     * Allegro Project
 
-Additional Resources
-++++++++++++++++++++
+Helpful Links
+++++++++++++++
 
 - :adi:`AD4080 Product Page <AD4080>`
 - :adi:`ADA4945-1 Product Page <ADA4945-1>`
@@ -277,8 +284,8 @@ Additional Resources
 - :adi:`ADALM2000 Product Page <ADALM2000>`
 - :dokuwiki:`Scopy (Analog Devices Wiki) </university/tools/m2k/scopy>`
 
-Help and Support
-----------------
+Support
+++++++++
 
 For questions and more information, please visit the
 :ez:`EngineerZone Support Community </>`.
