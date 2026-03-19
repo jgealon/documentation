@@ -8,8 +8,8 @@
 
     <title>EVAL-CN0540-ARDZ &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=a525f648" />
-    <script async="async" src="../../../_static/app.umd.js?v=fcf3088a"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/app.min.css?v=5c8d5ce8" />
+    <script async="async" src="../../../_static/app.umd.js?v=f78f54ff"></script>
     <link rel="icon" href="../../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -68,7 +68,7 @@
         <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
         
-        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
         
         <a id="logo" href="../../../index.html">
           <div>System Level</div>
@@ -135,7 +135,10 @@ Content on this topic
 
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../../products/adsp/index.html">Digital Signal Processors (ADSP)</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../products/adsp/linux-support.html">Linux support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../products/adsp/setup.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../products/adsp/sc598-clock-tree.html">SC598 Clock Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../products/adsp/use-cases.html">Use cases</a></li>
 </ul>
 </li>
 </ul>
@@ -219,6 +222,7 @@ Content on this topic
 
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../tools/adalm-lsmspg/index.html">ADALM-LSMSPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tools/adalm-mmsc/index.html">ADALM-MMSC</a></li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../../../tools/m2k/index.html">ADALM2000</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/m2k/devs/index.html">For Developers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tools/m2k/users/index.html">For End Users</a></li>
@@ -666,8 +670,8 @@ started with using IIO-Oscilloscope</p></li>
 <li><p>Use the board to better understand the <a class="icon adi reference external" href="https://www.analog.com/EVAL-CN0540-ARDZ" target="_blank">EVAL-CN0540-ARDZ</a></p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/hardware-configuration.html" target="_blank" title="(in Kuiper latest)"><span class="xref std std-doc">Configure a SD Card</span></a></p></li>
-<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/adi-kuiper-gen/repositories.html" target="_blank" title="(in Kuiper latest)"><span class="xref std std-doc">Update the SD Card</span></a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/hardware-configuration.html" target="_blank" title="(in Kuiper latest)"><span class="xref std std-doc">Configure a SD Card</span></a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/kuiper/repositories.html" target="_blank" title="(in Kuiper latest)"><span class="xref std std-doc">Update the SD Card</span></a></p></li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple">
@@ -698,9 +702,9 @@ started with using IIO-Oscilloscope</p></li>
 </ol>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/main/drivers/iio/adc/ad7768-1.c" target="_blank">CN0540 Linux driver source code</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/main/arch/arm/boot/dts/xilinx/zynq-coraz7s-cn0540.dts" target="_blank">CN0540/ CoraZ7S Linux device tree</a></p></li>
-<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/main/arch/arm/boot/dts/intel/socfpga/socfpga_cyclone5_de10_nano_cn0540.dts" target="_blank">CN0540/ DE-10Nano Linux device tree</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/drivers/iio/adc/ad7768-1.c" target="_blank">CN0540 Linux driver source code</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/arch/arm/boot/dts/xilinx/zynq-coraz7s-cn0540.dts" target="_blank">CN0540/ CoraZ7S Linux device tree</a></p></li>
+<li><p><a class="icon git reference external" href="https://github.com/analogdevicesinc/linux/tree/ci/arch/arm/boot/dts/intel/socfpga/socfpga_cyclone5_de10_nano_cn0540.dts" target="_blank">CN0540/ DE-10Nano Linux device tree</a></p></li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple">

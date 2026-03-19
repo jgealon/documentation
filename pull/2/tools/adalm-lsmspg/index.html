@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Active Learning Module for Low-Speed Mixed-Signal Exploration and Prototyping." name="description" />
+<meta content="Active Learning Module for Low-Speed Mixed-Signal Playground" name="description" />
 
     <title>ADALM-LSMSPG &#8212; System Level Documentation  documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=a525f648" />
-    <script async="async" src="../../_static/app.umd.js?v=fcf3088a"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/app.min.css?v=5c8d5ce8" />
+    <script async="async" src="../../_static/app.umd.js?v=f78f54ff"></script>
     <link rel="icon" href="../../_static/icon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ADALM2000" href="../m2k/index.html" />
+    <link rel="next" title="ADALM-MMSC" href="../adalm-mmsc/index.html" />
     <link rel="prev" title="Using Zephyr &amp; Codefusion Studio to Partition a Flash Filesystem" href="../../software/zephyr/using-zephyr-codefusion-fs/zephyr_codefusion_fs.html" />
    
   
@@ -68,7 +68,7 @@
         <a id="logo-org" href="https://analog.com" aria-label="Analog Devices Inc. landing page"></a>
         <div class="vertical-divider"></div>
         
-        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs" tabindex="0">Docs</label>
+        <label id="show-repotoc" for="input-show-repotoc" title="Show/hide docs">Docs</label>
         
         <a id="logo" href="../../index.html">
           <div>System Level</div>
@@ -101,7 +101,6 @@
 <li><a class="reference internal" href="#system-architecture">System Architecture</a></li>
 <li><a class="reference internal" href="#specifications">Specifications</a></li>
 <li><a class="reference internal" href="#what-s-inside-the-box">What’s Inside the Box?</a></li>
-<li><a class="reference internal" href="#package-contents">Package Contents</a></li>
 <li><a class="reference internal" href="#components-and-connections">Components and Connections</a></li>
 <li><a class="reference internal" href="#address-selection-jumpers">Address Selection Jumpers</a></li>
 <li><a class="reference internal" href="#system-monitor-control">System Monitor/Control</a></li>
@@ -151,7 +150,10 @@ Content on this topic
 
 <ul>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-1" id="toctree-collapse-1"/><div class="collapse"><a class="reference internal" href="../../products/adsp/index.html">Digital Signal Processors (ADSP)</a><label for="toctree-collapse-1"><div class="icon"></div></label></div><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/linux-support.html">Linux support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../products/adsp/setup.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/sc598-clock-tree.html">SC598 Clock Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../products/adsp/use-cases.html">Use cases</a></li>
 </ul>
 </li>
 </ul>
@@ -235,6 +237,7 @@ Content on this topic
 
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ADALM-LSMSPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adalm-mmsc/index.html">ADALM-MMSC</a></li>
 <li class="toctree-l1"><input class="toctree-collapse" type="checkbox" name="toctree-collapse-9" id="toctree-collapse-9"/><div class="collapse"><a class="reference internal" href="../m2k/index.html">ADALM2000</a><label for="toctree-collapse-9"><div class="icon"></div></label></div><ul>
 <li class="toctree-l2"><a class="reference internal" href="../m2k/devs/index.html">For Developers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../m2k/users/index.html">For End Users</a></li>
@@ -604,8 +607,8 @@ Content on this topic
           <div class="body" role="main">
             
   <section id="adalm-lsmspg">
-<h1>ADALM-LSMSPG<a class="headerlink" href="#adalm-lsmspg" title="Link to this heading"></a></h1>
-<p>Active Learning Module for Low-Speed Mixed-Signal Exploration and Prototyping.</p>
+<span id="id1"></span><h1>ADALM-LSMSPG<a class="headerlink" href="#adalm-lsmspg" title="Link to this heading"></a></h1>
+<p>Active Learning Module for Low-Speed Mixed-Signal Playground</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <figure class="align-left" id="id2">
@@ -614,30 +617,35 @@ Content on this topic
 <p><span class="caption-number">Figure 1 </span><span class="caption-text">ADALM-LSMSPG</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>The <a class="icon adi reference external" href="https://www.analog.com/ADALM-LSMSPG (Analog Devices Active Learning Module - Low-Speed Mixed-Signal Playground)" target="_blank">ADALM-LSMSPG (Analog Devices Active Learning Module - Low-Speed Mixed-Signal Playground)</a> facilitates hands-on learning of concepts related to software interfacing to hardware peripherals.</p>
-<p>It consists of two 8-channel multifunction ADC/DAC/digital GPIOs -  AD5592r and AD5593r - which have SPI and I2C interfaces, respectively.</p>
-<p>The AD5592r includes a simple NPN transistor curve tracer circuit as a representative instrumentation application.</p>
-<p>The AD5593r includes a PNP curve tracer, and both devices include bi-color LEDs for “Hello, World!” applications.</p>
-<p>An LM75 temperature sensor is also included as a “bare minimum” peripheral example.</p>
-<p>The ADALM-LSMSPG is compatible with Raspberry Pi and Feather form factor hosts, and an ADALM2000 interface allows monitoring of the SPI and I2C busses for driver development and debug.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/ADALM-LSMSPG" target="_blank">ADALM-LSMSPG (Analog Devices Active Learning Module - Low-Speed Mixed-Signal Playground)</a>
+facilitates hands-on learning of concepts related to software interfacing to hardware peripherals.</p>
+<p>It consists of two 8-channel multifunction ADC/DAC/digital GPIOs -  <a class="icon adi reference external" href="https://www.analog.com/AD5592r" target="_blank">AD5592r</a> and <a class="icon adi reference external" href="https://www.analog.com/AD5593r" target="_blank">AD5593r</a>-
+which have SPI and I2C interfaces, respectively.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD5592r" target="_blank">AD5592r</a> includes a simple NPN transistor curve tracer circuit as a representative instrumentation
+application.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD5593r" target="_blank">AD5593r</a> includes a PNP curve tracer, and both devices include bi-color LEDs for “Hello, World!”
+applications.</p>
+<p>An <a class="icon adi reference external" href="https://www.analog.com/LM75" target="_blank">LM75</a> temperature sensor is also included as a “bare minimum” peripheral example.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/ADALM-LSMSPG" target="_blank">ADALM-LSMSPG</a> is compatible with Raspberry Pi and Feather form factor hosts, and an
+<a class="icon adi reference external" href="https://www.analog.com/ADALM2000" target="_blank">ADALM2000</a> interface allows monitoring of the SPI and I2C busses for driver development and debug.</p>
 <section id="features">
 <h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Compatible with Raspberry Pi platforms</p></li>
 <li><dl class="simple">
 <dt>Compatible with Feather platforms</dt><dd><ul>
-<li><p>MAX32666FTHR</p></li>
-<li><p>MAX32655FTHR</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/MAX32655FTHR" target="_blank">MAX32655FTHR</a></p></li>
 <li><p>Other Feather platforms supporting 3.3V I/O</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>ADALM2000 interface for digital debug</p></li>
-<li><p>AD5592r SPI 8-channel ADC/DAC/GPIO</p></li>
-<li><p>AD5593r I2C 8-channel ADC/DAC/GPIO</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ADALM2000" target="_blank">ADALM2000</a> interface for digital debug</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/AD5592r" target="_blank">AD5592r</a> SPI 8-channel ADC/DAC/GPIO</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/AD5593r" target="_blank">AD5593r</a> I2C 8-channel ADC/DAC/GPIO</p></li>
 <li><p>NPN and PNP transistor curve tracer example application circuits</p></li>
-<li><p>LM75 temperature sensor</p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/LM75" target="_blank">LM75</a> temperature sensor</p></li>
 <li><p>SPI and I2C Pmod expansion headers</p></li>
 </ul>
 </section>
@@ -671,20 +679,19 @@ Content on this topic
 <section id="what-s-inside-the-box">
 <h3>What’s Inside the Box?<a class="headerlink" href="#what-s-inside-the-box" title="Link to this heading"></a></h3>
 <p>Upon purchase of the ADALM-LSMSPG kit, the package comes with the following boards and accessories:</p>
+<blockquote>
+<div><ol class="upperalpha simple">
+<li><p>ADALM-LSMSPG main board</p></li>
+<li><p>40-pin, 15 cm ribbon cable for Raspberry Pi</p></li>
+<li><p>Jumpers for setting AD5592r and LM75 I2C address</p></li>
+</ol>
+</div></blockquote>
 <figure class="align-default" id="id4">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_package_contents.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/adalm-lsmspg_package_contents.png" />
 <figcaption>
 <p><span class="caption-number">Figure 3 </span><span class="caption-text">ADALM-LSMSPG Kit Contents</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-</section>
-<section id="package-contents">
-<h3>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>ADALM-LSMSPG main board</p></li>
-<li><p>40-pin, 15 cm ribbon cable for Raspberry Pi</p></li>
-<li><p>Jumpers for setting AD5592r and LM75 I2C address</p></li>
-</ul>
 </section>
 <section id="components-and-connections">
 <h3>Components and Connections<a class="headerlink" href="#components-and-connections" title="Link to this heading"></a></h3>
@@ -694,15 +701,55 @@ Content on this topic
 <p><span class="caption-number">Figure 4 </span><span class="caption-text">ADALM-LSMSPG Hardware Components and Connections</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<ul class="simple">
-<li><p><strong>P31</strong>: Raspberry Pi interface. Connect to Raspberry Pi 4, 400, 5, 500 via supplied ribbon cable. Be sure to observe polarity / pin 1 locaton.</p></li>
-<li><p><strong>P1</strong>, <strong>P28</strong>: Feather interface. Pins or stacking headers must be installed on Feather platform board, with pins facing downward.</p></li>
-</ul>
-<p><em>Note:</em> The Raspberry Pi and Feather interfaces are mutually exclusive.</p>
-<ul class="simple">
-<li><p><strong>P16</strong>: ADALM2000 interface. Allows monitoring of digital traffic on the I2C, SPI, and various GPIO signals.</p></li>
-<li><p><strong>P27</strong>: ADALM2000 through-connections. Allows monitoring of other signals via jumper wires.</p></li>
-</ul>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ADALM-LSMSPG Pins</p></th>
+<th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P31</p></td>
+<td><p>Raspberry Pi interface</p></td>
+<td><p>Connect to Raspberry Pi 4, 400, 5, 500 via supplied
+ribbon cable. Be sure to observe polarity / pin 1
+location.</p></td>
+</tr>
+<tr class="row-odd"><td><p>P1, P28</p></td>
+<td><p>Feather interface</p></td>
+<td><p>Pins or stacking headers must be installed on
+Feather platform board, with pins facing downward.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Raspberry Pi and Feather interfaces are mutually exclusive.</p>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ADALM-LSMSPG Pins</p></th>
+<th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P16</p></td>
+<td><p>ADALM2000 interface</p></td>
+<td><p>Allows monitoring of digital traffic on the I2C,
+SPI, and various GPIO signals.</p></td>
+</tr>
+<tr class="row-odd"><td><p>P27</p></td>
+<td><p>ADALM2000 through-con/
+nections</p></td>
+<td><p>Allows monitoring of other signals via jumper wires.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Refer to the table below for P16, P27 signal mapping.</p>
 <div class="table-wrapper colwidths-given fullwidth docutils container" id="id6">
 <table class="fullwidth docutils align-default" id="id6">
@@ -753,10 +800,26 @@ Content on this topic
 </tbody>
 </table>
 </div>
-<ul class="simple">
-<li><p><strong>P31</strong>:  AD5592r GPIO, Reference connections</p></li>
-<li><p><strong>P5</strong>: AD5593r GPIO, Reference connections</p></li>
-</ul>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ADALM-LSMSPG Pins</p></th>
+<th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>P31</p></td>
+<td><p>AD5592r GPIO</p></td>
+<td><p>Reference connections</p></td>
+</tr>
+<tr class="row-odd"><td><p>P5</p></td>
+<td><p>AD5593r GPIO</p></td>
+<td><p>Reference connections</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Refer to the figure below for P2, P5 signal mapping.</p>
 <figure class="align-default" id="id7">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad559xr_gpio_pin.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad559xr_gpio_pin.png" />
@@ -821,16 +884,19 @@ Content on this topic
 </section>
 <section id="curve-tracer-application-circuits">
 <h3>Curve Tracer Application Circuits<a class="headerlink" href="#curve-tracer-application-circuits" title="Link to this heading"></a></h3>
-<p>The AD5592r and AD5593r drive simple NPN and PNP (respectively) curve tracer circuits.
-This represents a simple DC test instrument that involves the “set a current, set a voltage, take a measurement, do some math, step, repeat” sequence of operations.
-The details of the experiments are covered in the <a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for LSMSPG Lesson</a>.</p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/AD5592r" target="_blank">AD5592r</a> and <a class="icon adi reference external" href="https://www.analog.com/AD5593r" target="_blank">AD5593r</a> drive simple NPN and PNP (respectively) curve tracer circuits.
+This represents a simple DC test instrument that involves the “set a current, set a voltage,
+take a measurement, do some math, step, repeat” sequence of operations.
+The details of the experiments are covered in the
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for LSMSPG Lesson</a>.</p>
 <figure class="align-default" id="id10">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5592r_npn_curve_tracer_connections.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5592r_npn_curve_tracer_connections.png" />
 <figcaption>
 <p><span class="caption-number">Figure 6 </span><span class="caption-text">AD5592r NPN Curve Tracer Connections</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>The PNP curve tracer has two options for the emitter drive: AD5593r CH3 (default), or the 3.3V supply rail.</p>
+<p>The PNP curve tracer has two options for the emitter drive: AD5593r CH3 (default), or the 3.3V
+supply rail.</p>
 <figure class="align-default" id="id11">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5593r_pnp_curve_tracer_connections.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ad5593r_pnp_curve_tracer_connections.png" />
 <figcaption>
@@ -843,14 +909,16 @@ The details of the experiments are covered in the <a class="icon link reference 
 <ul class="simple">
 <li><p><strong>Raspberry Pi Setup</strong>:</p></li>
 </ul>
-<p>For Raspberry Pi Zero 2 W, 4, and 5, use the included ribbon cable to make the connection as shown in Figure 1</p>
+<p>For Raspberry Pi Zero 2 W, 4, and 5, use the included ribbon cable to make the connection as shown
+in the figure below.</p>
 <figure class="align-default" id="id12">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/rpi-4_5_w_with_lsmspg.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/rpi-4_5_w_with_lsmspg.png" />
 <figcaption>
 <p><span class="caption-number">Figure 8 </span><span class="caption-text">RPi Zero 2W/4/5 and ADALM-LSMSPG with 40-pin Ribbon Cable Connection</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>For Raspberry Pi 400 and 500, use the included ribbon cable to make the connection as shown in Figure 2</p>
+<p>For Raspberry Pi 400 and 500, use the included ribbon cable to make the connection as shown in
+the figure below.</p>
 <figure class="align-default" id="id13">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/rpi-400or500_with_lsmspg.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/rpi-400or500_with_lsmspg.png" />
 <figcaption>
@@ -860,10 +928,15 @@ The details of the experiments are covered in the <a class="icon link reference 
 <ul class="simple">
 <li><p><strong>Feather Setup</strong>:</p></li>
 </ul>
-<p>Most Feather platform boards ship without peripheral headers installed. Refer to the board’s instructions, and install either:</p>
-<p>Downward-facing 100-mil post headers
-Stacking headers with posts extending from the reverse side of the board.
-Install the Feather on P20 as shown in Figure below.</p>
+<p>Most Feather platform boards ship without peripheral headers installed. Refer to the board’s
+instructions, and install either:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Downward-facing 100-mil post headers</p></li>
+<li><p>Stacking headers with posts extending from the reverse side of the board.</p></li>
+<li><p>Install the Feather on P20 as shown in the Figure below.</p></li>
+</ul>
+</div></blockquote>
 <figure class="align-default" id="id14">
 <img alt="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/max32666fthr_on_adalm-lsmspg.png" src="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/max32666fthr_on_adalm-lsmspg.png" />
 <figcaption>
@@ -875,8 +948,9 @@ Install the Feather on P20 as shown in Figure below.</p>
 <h3>Software Setup<a class="headerlink" href="#software-setup" title="Link to this heading"></a></h3>
 <section id="raspberry-pi-setup">
 <h4>Raspberry Pi Setup<a class="headerlink" href="#raspberry-pi-setup" title="Link to this heading"></a></h4>
-<p>Prepare an SD card with ADI Kuiper Linux following the instructions at <a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/linux/kuiper/index.html" target="_blank">ADI Kuiper Linux Guide</a>.
-Add the following to the end of <code class="docutils literal notranslate"><span class="pre">/boot/config.txt</span></code>:</p>
+<p>Prepare an SD card with ADI Kuiper Linux following the instructions at
+<a class="reference internal" href="../../linux/kuiper/index.html#kuiper"><span class="std std-ref">ADI Kuiper Linux Guide</span></a>.</p>
+<p>Add the following to the end of <code class="docutils literal notranslate"><span class="pre">/boot/config.txt</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># config.txt additions
 
 dtoverlay=rpi-adalm-lsmspg
@@ -897,13 +971,14 @@ then it is safe to remove power.</p>
 </section>
 <section id="max32666fthr-setup">
 <h4>MAX32666FTHR Setup<a class="headerlink" href="#max32666fthr-setup" title="Link to this heading"></a></h4>
-<p>The <a class="icon link reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> includes a
-MAX32625PICO debugger that can be used to load the ADALM-LSMSPG firmware image.
-Prepare the MAX32625PICO itself with the MAX32666FTHR-specific DAPLink image from: <a class="icon link reference external" href="https://github.com/analogdevicesinc/max32625pico-firmware-images" target="_blank">MAX32625PICO firmware images</a></p>
+<p>The <a class="icon adi reference external" href="https://www.analog.com/MAX32666FTHR" target="_blank">MAX32666FTHR</a> includes a <a class="icon adi reference external" href="https://www.analog.com/MAX32625PICO" target="_blank">MAX32625PICO</a> debugger that can be used to load
+the ADALM-LSMSPG firmware image. Prepare the MAX32625PICO itself with the MAX32666FTHR-specific
+DAPLink image from: <a class="icon git reference external" href="https://github.com/analogdevicesinc/max32625pico-firmware-images/" target="_blank">MAX32625PICO firmware images</a></p>
 <p>Leave the MAX32625PICO plugged in, and plug in the MAX32666FTHR using another
 USB-Micro cable. Connect the debug interface to the MAX32666FTHR with the supplied
 10-pin ribbon cable. Download the ADALM-LSMSPG tinyiiod firmware image
-(filename <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg.zip</span></code>) from: <a class="icon link reference external" href="https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit" target="_blank">ADALM-LSMSPG firmware (no-OS releases)</a></p>
+(filename <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg.zip</span></code>) from:
+<a class="icon git reference external" href="https://github.com/analogdevicesinc/no-OS/releases/tag/last_commit" target="_blank">ADALM-LSMSPG firmware (no-OS releases)</a></p>
 <p>Unzip the archive, copy the <code class="docutils literal notranslate"><span class="pre">adalm-lsmspg_maxim_iio.hex</span></code> file, and paste it into
 the DAPLINK mass storage device (typically <code class="docutils literal notranslate"><span class="pre">D:</span></code> or <code class="docutils literal notranslate"><span class="pre">E:</span></code> on Windows systems).
 The DAPLINK drive will auto-eject, and the heartbeat LED on the ADALM-LSMSPG
@@ -912,10 +987,12 @@ will begin blinking.</p>
 <section id="application-setup">
 <h4>Application Setup<a class="headerlink" href="#application-setup" title="Link to this heading"></a></h4>
 <p>Detailed instructions for various application software examples are included in the
-<a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for Low-Speed Mixed Signal workshop</a>,
+<a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for LSMSPG Lesson</a>,
 as well as other supporting material. The underlying API for Raspberry Pi/Linux and
-bare-metal tinyiiod servers is <code class="docutils literal notranslate"><span class="pre">libiio</span></code>, which can be installed from: <a class="icon link reference external" href="https://analogdevicesinc.github.io/libiio/index.html" target="_blank">libiio documentation</a></p>
-<p>Once installed, information about the ADALM-LSMSPG context can be displayed by running <code class="docutils literal notranslate"><span class="pre">iio_info</span></code> and passing the URI argument.</p>
+bare-metal tinyiiod servers is <code class="docutils literal notranslate"><span class="pre">libiio</span></code>, which can be installed from:
+<a class="reference internal" href="../../software/libiio/index.html#libiio"><span class="std std-ref">libiio documentation</span></a></p>
+<p>Once installed, information about the ADALM-LSMSPG context can be displayed by
+running <code class="docutils literal notranslate"><span class="pre">iio_info</span></code> and passing the URI argument.</p>
 <p>For Kuiper Linux, the default hostname is <code class="docutils literal notranslate"><span class="pre">analog</span></code>. Example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>iio_info - network
 
@@ -929,31 +1006,39 @@ iio_info -s serial:COM4
 </pre></div>
 </div>
 <p>Replace <code class="docutils literal notranslate"><span class="pre">COM4</span></code> with the appropriate COM port number on Windows, or <code class="docutils literal notranslate"><span class="pre">/dev/ttyX</span></code> on Linux.</p>
-<p>The <em>Tools for Low-Speed Mixed-Signal System Design</em> tutorial contains many additional examples of communicating with the ADALM-MMSC.</p>
+<p>The <em>Tools for Low-Speed Mixed-Signal System Design</em> tutorial contains many additional examples
+of communicating with the ADALM-MMSC.</p>
 </section>
 </section>
 <section id="additional-resources">
 <h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for Low-Speed Mixed Signal Workshop</a></p></li>
-<li><p><a class="icon link reference external" href="https://analog.com/ad5592r" target="_blank">AD5592R Product Page</a></p></li>
-<li><p><a class="icon link reference external" href="https://analog.com/ad5593r" target="_blank">AD5593R Product Page</a></p></li>
-<li><p><a class="icon link reference external" href="https://analog.com/lm75" target="_blank">LM75 Product Page</a></p></li>
+<li><p><a class="icon link reference external" href="https://analogdevicesinc.github.io/documentation/learning/tools_for_ls/index.html" target="_blank">Tools for LSMSPG Lesson</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ad5592r" target="_blank">AD5592R Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/ad5593r" target="_blank">AD5593R Product Page</a></p></li>
+<li><p><a class="icon adi reference external" href="https://www.analog.com/lm75" target="_blank">LM75 Product Page</a></p></li>
 </ul>
 </section>
 <section id="design-integration-files">
 <h3>Design &amp; Integration Files<a class="headerlink" href="#design-integration-files" title="Link to this heading"></a></h3>
-<ul class="simple">
+<div class="admonition-download admonition">
+<p class="admonition-title">Download</p>
+<p><a class="icon reference download external" download="" href="https://media.githubusercontent.com/media/jgealon/documentation/adalm-lsmspg/docs/tools/adalm-lsmspg/ADALM-LSMSPG-designsupport.zip"><code class="xref download docutils literal notranslate"><span class="pre">ADALM-LSMSPG</span> <span class="pre">Design</span> <span class="pre">&amp;</span> <span class="pre">Integration</span> <span class="pre">Files</span></code></a></p>
+<blockquote>
+<div><ul class="simple">
 <li><p>Schematic</p></li>
 <li><p>PCB Layout</p></li>
 <li><p>Bill of Materials</p></li>
 <li><p>Allegro Project</p></li>
 </ul>
+</div></blockquote>
+</div>
 </section>
 </section>
 <section id="help-and-support">
 <h2>Help and Support<a class="headerlink" href="#help-and-support" title="Link to this heading"></a></h2>
-<p>For questions and more information, please visit the <a class="icon ez reference external" href="https://ez.analog.com/" target="_blank">EngineerZone Support Community</a> or contact your local ADI representative.</p>
+<p>For questions and more information, please visit the <a class="icon ez reference external" href="https://ez.analog.com/" target="_blank">EngineerZone Support Community</a>
+or contact your local ADI representative.</p>
 </section>
 </section>
 
@@ -962,7 +1047,7 @@ iio_info -s serial:COM4
               <div class="related">
                 &nbsp;
     <a href="../../software/zephyr/using-zephyr-codefusion-fs/zephyr_codefusion_fs.html" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Using Zephyr &amp; Codefusion Studio to Partition a Flash Filesystem</a>
-    <a href="../m2k/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">ADALM2000</a>
+    <a href="../adalm-mmsc/index.html" title="Next document (Alt+Shift+RightArrow)" class="next">ADALM-MMSC</a>
               </div>
           
         </div>
