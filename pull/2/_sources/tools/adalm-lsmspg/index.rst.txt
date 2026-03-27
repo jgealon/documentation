@@ -9,7 +9,7 @@ Overview
 --------
 
 
-.. figure:: adalm-lsmspg_angle.jpeg
+.. figure:: ADALM-LSMSPG-top-angle-evaluation-board.png
    :align: left
 
    ADALM-LSMSPG
@@ -62,10 +62,6 @@ System Architecture
 .. figure:: ADALM-LSMSPG_block_diagram.png
 
    ADALM-LSMSPG System Architecture
-
-Specifications
-++++++++++++++
-
 
 What's Inside the Box?
 ++++++++++++++++++++++
@@ -315,4 +311,3 @@ Help and Support
 
 For questions and more information, please visit the :ez:`EngineerZone Support Community </>` 
 or contact your local ADI representative.
-
