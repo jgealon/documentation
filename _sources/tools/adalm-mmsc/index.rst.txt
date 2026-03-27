@@ -8,13 +8,13 @@ Mixed-Mode Signal Chain Active Learning Module
 Overview
 --------
 
-.. figure:: adalm-mmsc_angle.jpg
+.. figure:: ADALM-MMSC_top-angle.png
    :align: left
-   :width: 600 px
+   :width: 800 px
 
    ADALM-MMSC Board
 
-The :adi:`Analog Devices Active Learning Module-Mixed-Mode Signal Chain <ADALM-MMSC>`
+The :adi:`Analog Devices Active Learning Module-Mixed-Mode Signal Chain (ADALM-MMSC) <ADALM-MMSC>`
 is an educational board designed to facilitate hands-on exploration of
 fundamental signal chain concepts.
 
@@ -86,7 +86,7 @@ Package Contents
 The ADALM-MMSC kit includes the following boards and accessories:
 
 .. figure:: package_contents.png
-   :width: 800 px
+   :width: 500 px
 
    ADALM-MMSC Kit Contents
 
