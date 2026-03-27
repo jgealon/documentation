@@ -88,7 +88,7 @@ The ADALM-MMSC kit includes the following boards and accessories:
 .. figure:: package_contents.png
    :width: 500 px
 
-   ADALM-MMSC Kit Contents
+   ADALM-MMSC Package Contents
 
 - (A.) 1x :adi:`ADALM-MMSC Board`
 - (B.) 1x Pre-programmed :adi:`MAX32666FTHR` board
