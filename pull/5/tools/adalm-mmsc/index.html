@@ -1096,6 +1096,9 @@ lower two posts of P17 (Pins 3 and 4).</p></li>
 <li><p>Connect the striped yellow W2 wire from the ADALM2000 to P17 Pin 2.</p></li>
 <li><p>Connect both the ADALM2000 and the ADALM‑MMSC to the host computer
 using two micro‑USB cables.</p></li>
+<li><p>Set P10 to the lower position (DIR) and P12 to the upper position (DIR).
+This configuration bypasses the Sallen‑Key filter and applies the inputs
+directly to the fully differential amplifier.</p></li>
 </ol>
 </section>
 <section id="software-setup">
@@ -1210,6 +1213,10 @@ firmware upgrade has completed successfully.</p></li>
 <li><p>Allegro Project</p></li>
 </ul>
 </div></blockquote>
+</div>
+<div class="admonition-schematic-errata admonition">
+<p class="admonition-title">Schematic Errata</p>
+<p>The value of <strong>R44</strong> is <strong>499 Ohms</strong> (not 1.33K as shown in the schematic)</p>
 </div>
 </section>
 <section id="helpful-links">
